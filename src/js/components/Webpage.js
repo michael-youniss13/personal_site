@@ -3,6 +3,8 @@ import React from 'react';
 import NameBar from './NameBar';
 import MenuBar from './MenuBar';
 
+import ContactView from './ContactView'
+
 import { Views } from '../../Constants';
 
 export default class Webpage extends React.Component {
@@ -23,7 +25,7 @@ export default class Webpage extends React.Component {
       case Views.PROJECTS_VIEW:
         return ( <div> PROJECTS </div> );
       case Views.CONTACT_VIEW:
-        return ( <div> CONTACT </div> );
+        return ( <ContactView /> );
       case Views.RESUME_VIEW:
         return ( <div> RESUME </div> );
       default:
