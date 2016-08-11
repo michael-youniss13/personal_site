@@ -4,6 +4,9 @@ import { Colors } from '../../Constants'
 import MenuBarItem from './MenuBarItem'
 
 export default class MenuBar extends React.Component {
+  constructor(props){
+    super(props);
+  }
   render() {
     const menuStyle = {
       fontFamily: 'Helvetica, Sans-Serif',
@@ -18,7 +21,8 @@ export default class MenuBar extends React.Component {
     return(
       <div style={ menuStyle }>
         { this.props.menuBarItems.map((item) => {
-          return( <MenuBarItem key={ uniqueKey++ } item={item} handleItemClick={this.props.handleItemClick}/> )
+          return( <MenuBarItem key={ uniqueKey++ } item={item} handleItemClick={this.props.handleItemClick}
+                               currentView={this.props.currentView}/> )
         })}
       </div>
     )
@@ -27,5 +31,6 @@ export default class MenuBar extends React.Component {
 
 MenuBar.PropTypes = {
   menuBarItems: React.PropTypes.array,
-  handleItemClick: React.PropTypes.func
+  handleItemClick: React.PropTypes.func,
+  currentView: React.PropTypes.string
 }

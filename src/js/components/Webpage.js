@@ -3,7 +3,10 @@ import React from 'react';
 import NameBar from './NameBar';
 import MenuBar from './MenuBar';
 
-import ContactView from './ContactView'
+import ContactView from './ContactView';
+import ProjectView from './ProjectView';
+
+import style from '../../img/sass/main.scss';
 
 import { Views } from '../../Constants';
 
@@ -23,7 +26,7 @@ export default class Webpage extends React.Component {
       case Views.ABOUT_ME_VIEW:
         return ( <div> ABOUT ME </div> );
       case Views.PROJECTS_VIEW:
-        return ( <div> PROJECTS </div> );
+        return ( <ProjectView /> );
       case Views.CONTACT_VIEW:
         return ( <ContactView /> );
       case Views.RESUME_VIEW:
@@ -45,8 +48,9 @@ export default class Webpage extends React.Component {
     return(
       <div>
         <NameBar />
-        <MenuBar menuBarItems={ menuBarItems } handleItemClick={ handleMenuItemClick }/>
-        {this.renderContentView()}
+        <MenuBar menuBarItems={ menuBarItems } handleItemClick={ handleMenuItemClick }
+                 currentView={ this.state.currentView }/>
+          {this.renderContentView()}
       </div>
     )
   }

@@ -5,32 +5,33 @@ export default class MenuBarItem extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { mouseHovering: false };
+    this.state = { mouseHovering: false};
   }
 
   handleMouseEnter() {
     this.setState({ mouseHovering: true });
   }
 
-
   handleMouseLeave() {
     this.setState({ mouseHovering: false });
   }
 
   render() {
-    const hoverMenuItemStyle = this.state.mouseHovering ? { color: Colors.ACCENT_COLOR} : { color: Colors.TEXT_COLOR };
-    const menuItemStyle = {
+    const activeItem = this.props.item.view === this.props.currentView;
+    let menuItemStyle = {
       display: 'inline-block',
       width: '15%',
       fontWeight: '100'
-    }
+    };
+
+    activeItem ? menuItemStyle.color = Colors.ACCENT_COLOR : menuItemStyle.color = Colors.TEXT_COLOR;
+    this.state.mouseHovering ? menuItemStyle.borderBottom = 'solid 2px ' + Colors.ACCENT_COLOR :  menuItemStyle.borderBottom = 'solid 2px transparent';
 
     return(
       <div  style={ menuItemStyle }
             onClick={ () => { this.props.handleItemClick(this.props.item.view) }}>
         <div  onMouseEnter={ this.handleMouseEnter.bind(this) }
-              onMouseLeave={ this.handleMouseLeave.bind(this) }
-              style={hoverMenuItemStyle}>
+              onMouseLeave={ this.handleMouseLeave.bind(this) }>
           {this.props.item.title}
         </div>
       </div>
@@ -40,5 +41,6 @@ export default class MenuBarItem extends React.Component {
 
 MenuBarItem.PropTypes = {
   item: React.PropTypes.object,
-  handleItemClick: React.PropTypes.func
+  handleItemClick: React.PropTypes.func,
+  currentView: React.PropTypes.string
 }
