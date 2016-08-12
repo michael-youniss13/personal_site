@@ -4,10 +4,43 @@ import ProjectTileRow from './ProjectTileRow';
 
 export default class ProjectView extends React.Component {
   render() {
+    const projectList = [
+      {
+        tileName:'Bit Coin Project',
+        imageURL: 'BitCoinLogo.png',
+        description: 'For a mathematical encryption class I wrote a paper about the mathematics underlying bitcoin',
+        link: 'Click here to read the paper'
+      },
+      {
+        tileName:'Tetris Project',
+        imageURL: 'TetrisLogo.png',
+        description: 'For a computer science class I programmed Tetris in Java',
+        link: 'Click here to play'
+      },
+      {
+        tileName:'Rocket Software Internship',
+        imageURL: 'RocketSoftwareLogo.png',
+        description: 'The summers of 2013 and 2014 I worked on projects from mobile apps to network programming and researched big data',
+        link: ''
+      },
+      {
+        tileName:'Pluralsight Internship',
+        imageURL: 'PluralsightLogo.png',
+        description: 'During the summer of 2015 I worked on building a menu out for their web application',
+        link: ''
+      },
+      {
+        tileName:'IBM Internship',
+        imageURL: 'IBMLogo.png',
+        description: 'I built a UI component in react for a chat client for user feedback',
+        link: ''
+      }
+    ]
+
+
     return(
       <div style={{ textAlign: 'center', verticalAlign: 'center', paddingTop: '30px' }}>
-        <ProjectTileRow />
-        <ProjectTileRow />
+        <ProjectTileRow projectList={projectList} />
       </div>
     )
   }

@@ -101,7 +101,7 @@ export default class ProjectTile extends React.Component {
           <img src={imageURL} style={ImageStyle} />
         </div>
         <div className={DescriptionClasses}>
-          Description
+          {this.props.description}
         </div>
         <div style={TileTitleStyle}>
           {this.props.tileName}
