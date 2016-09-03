@@ -22879,8 +22879,8 @@
 		}
 
 		_createClass(MenuBar, [{
-			key: 'return',
-			value: function _return() {
+			key: 'render',
+			value: function render() {
 
 				return _react2.default.createElement(
 					'div',

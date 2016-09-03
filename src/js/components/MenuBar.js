@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default class MenuBar extends React.Component {
-	return() {
+	render() {
 
 		return(
 			<div>
