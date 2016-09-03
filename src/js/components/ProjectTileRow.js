@@ -5,7 +5,6 @@ import ProjectTile from './ProjectTile';
 export default class ProjectTileRow extends React.Component {
   render() {
 
-
     return(
       <div style={{ textAlign: 'center', verticalAlign: 'center', paddingTop: '30px' }}>
         {

@@ -1,9 +1,11 @@
 var path = require('path');
 var webpack = require('webpack');
- 
+
+const PUBLIC = path.resolve(__dirname, 'src/js/public');
+
 module.exports = {
-  entry: './main.js',
-  output: { path: __dirname, filename: 'bundle.js' },
+  entry: './src/js/index.js',
+  output: {path: PUBLIC, filename: 'bundle.js'},
   module: {
     loaders: [
       {
@@ -13,7 +15,11 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
-    ]
+    ],
   },
 };

@@ -7,8 +7,8 @@ import MdArrowDropDownCircle from 'react-icons/lib/md/arrow-drop-down-circle';
 
 
 export default class ProjectTile extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { buttonPress: false, tileHover: false, openProject: false };
   }
 
@@ -33,6 +33,8 @@ export default class ProjectTile extends React.Component {
   }
 
   render() {
+    console.log(Colors);
+    console.log(Colors.TEXT_COLOR);
     let TileStyle =  {
       display: 'inline-block',
       fontFamily: 'Helvetica, Sans-Sertif',

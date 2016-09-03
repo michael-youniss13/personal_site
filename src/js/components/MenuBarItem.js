@@ -1,10 +1,10 @@
 import React from 'react';
-import { Colors } from '../../Constants';
+import Colors from '../../Constants';
 
 export default class MenuBarItem extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { mouseHovering: false};
   }
 

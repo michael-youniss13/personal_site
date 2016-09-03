@@ -1,8 +1,9 @@
 import React from 'react';
 
 import ProjectTileRow from './ProjectTileRow';
+import MenuBar from './MenuBar'
 
-export default class ProjectView extends React.Component {
+export class ProjectView extends React.Component {
   render() {
     const projectList = [
       {
@@ -42,6 +43,32 @@ export default class ProjectView extends React.Component {
       <div style={{ textAlign: 'center', verticalAlign: 'center', paddingTop: '30px' }}>
         <ProjectTileRow projectList={projectList} />
       </div>
+    )
+  }
+}
+
+
+export class AboutMeView extends React.Component {
+  render() {
+    return(
+      <div>HELLO WORLD</div>
+    )
+  }
+}
+
+
+export class ContactView extends React.Component {
+  render() {
+    return(
+      <div>HELLO WORLD</div>
+    )
+  }
+}
+
+export class ResumeView extends React.Component {
+  render() {
+    return(
+      <div>HELLO WORLD</div>
     )
   }
 }
