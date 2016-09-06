@@ -11,3 +11,10 @@ export const Colors = {
 	TERTIARY_COLOR: 'rgb(189,144,118)',
 	TERTIARY_COLOR_LIGHT: 'rgba(189,144,118, .65)'
 }
+
+export const Views = {
+	ABOUT: 'ABOUT',
+	PROJECTS: 'PROJECTS',
+	CONTACT: 'CONTACT',
+	RESUME: 'RESUME'
+}

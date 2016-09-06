@@ -4,7 +4,7 @@ import ProjectTile from './ProjectTile';
 
 export default class ProjectTileRow extends React.Component {
   render() {
-
+    let key = 0;
     return(
       <div style={{ textAlign: 'center', verticalAlign: 'center', paddingTop: '30px' }}>
         {
@@ -12,7 +12,8 @@ export default class ProjectTileRow extends React.Component {
             return <ProjectTile tileName={project.tileName}
                                 imageURL={project.imageURL}
                                 description={project.description}
-                                link={project.link} />
+                                link={project.link}
+                                key={key++}/>
           })
         }
       </div>

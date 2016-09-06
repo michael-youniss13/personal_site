@@ -58,13 +58,13 @@
 
 	var _Views = __webpack_require__(172);
 
-	var _MenuBar = __webpack_require__(185);
+	var _TitleBar = __webpack_require__(185);
 
-	var _MenuBar2 = _interopRequireDefault(_MenuBar);
+	var _TitleBar2 = _interopRequireDefault(_TitleBar);
 
 	var _Constants = __webpack_require__(182);
 
-	__webpack_require__(186);
+	__webpack_require__(187);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -80,22 +80,32 @@
 		function Webpage() {
 			_classCallCheck(this, Webpage);
 
-			return _possibleConstructorReturn(this, (Webpage.__proto__ || Object.getPrototypeOf(Webpage)).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, (Webpage.__proto__ || Object.getPrototypeOf(Webpage)).call(this));
+
+			_this.state = { currentView: _Constants.Views.ABOUT };
+			return _this;
 		}
 
 		_createClass(Webpage, [{
+			key: 'handleMenuItemClick',
+			value: function handleMenuItemClick(input) {
+				this.setState({ currentView: input });
+			}
+		}, {
 			key: 'render',
 			value: function render() {
-				console.log('webpage as fuck');
-				console.log(_Constants.Colors);
+				console.log(this.state.currentView);
+
+				var MenuItems = [{ title: 'ABOUT', view: _Constants.Views.ABOUT }, { title: 'PROJECTS', view: _Constants.Views.PROJECTS }, { title: 'CONTACT', view: _Constants.Views.CONTACT }, { title: 'RESUME', view: _Constants.Views.RESUME }];
+
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_MenuBar2.default, null),
-					_react2.default.createElement(_Views.ProjectView, null),
-					_react2.default.createElement(_Views.AboutMeView, null),
-					_react2.default.createElement(_Views.ContactView, null),
-					_react2.default.createElement(_Views.ResumeView, null)
+					_react2.default.createElement(_TitleBar2.default, { menuItems: MenuItems, currentView: this.state.currentView, handleClick: this.handleMenuItemClick.bind(this) }),
+					this.state.currentView === _Constants.Views.ABOUT && _react2.default.createElement(_Views.AboutView, null),
+					this.state.currentView === _Constants.Views.PROJECTS && _react2.default.createElement(_Views.ProjectView, null),
+					this.state.currentView === _Constants.Views.RESUME && _react2.default.createElement(_Views.ResumeView, null),
+					this.state.currentView === _Constants.Views.CONTACT && _react2.default.createElement(_Views.ContactView, null)
 				);
 			}
 		}]);
@@ -21485,7 +21495,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.ResumeView = exports.ContactView = exports.AboutMeView = exports.ProjectView = undefined;
+	exports.ResumeView = exports.ContactView = exports.AboutView = exports.ProjectView = undefined;
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -21496,10 +21506,6 @@
 	var _ProjectTileRow = __webpack_require__(173);
 
 	var _ProjectTileRow2 = _interopRequireDefault(_ProjectTileRow);
-
-	var _MenuBar = __webpack_require__(185);
-
-	var _MenuBar2 = _interopRequireDefault(_MenuBar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21559,16 +21565,16 @@
 	  return ProjectView;
 	}(_react2.default.Component);
 
-	var AboutMeView = exports.AboutMeView = function (_React$Component2) {
-	  _inherits(AboutMeView, _React$Component2);
+	var AboutView = exports.AboutView = function (_React$Component2) {
+	  _inherits(AboutView, _React$Component2);
 
-	  function AboutMeView() {
-	    _classCallCheck(this, AboutMeView);
+	  function AboutView() {
+	    _classCallCheck(this, AboutView);
 
-	    return _possibleConstructorReturn(this, (AboutMeView.__proto__ || Object.getPrototypeOf(AboutMeView)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (AboutView.__proto__ || Object.getPrototypeOf(AboutView)).apply(this, arguments));
 	  }
 
-	  _createClass(AboutMeView, [{
+	  _createClass(AboutView, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -21579,7 +21585,7 @@
 	    }
 	  }]);
 
-	  return AboutMeView;
+	  return AboutView;
 	}(_react2.default.Component);
 
 	var ContactView = exports.ContactView = function (_React$Component3) {
@@ -21668,7 +21674,7 @@
 	  _createClass(ProjectTileRow, [{
 	    key: 'render',
 	    value: function render() {
-
+	      var key = 0;
 	      return _react2.default.createElement(
 	        'div',
 	        { style: { textAlign: 'center', verticalAlign: 'center', paddingTop: '30px' } },
@@ -21676,7 +21682,8 @@
 	          return _react2.default.createElement(_ProjectTile2.default, { tileName: project.tileName,
 	            imageURL: project.imageURL,
 	            description: project.description,
-	            link: project.link });
+	            link: project.link,
+	            key: key++ });
 	        })
 	      );
 	    }
@@ -22733,6 +22740,13 @@
 		TERTIARY_COLOR_LIGHT: 'rgba(189,144,118, .65)'
 	};
 
+	var Views = exports.Views = {
+		ABOUT: 'ABOUT',
+		PROJECTS: 'PROJECTS',
+		CONTACT: 'CONTACT',
+		RESUME: 'RESUME'
+	};
+
 /***/ },
 /* 183 */
 /***/ function(module, exports, __webpack_require__) {
@@ -22861,6 +22875,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _MenuBarItem = __webpack_require__(186);
+
+	var _MenuBarItem2 = _interopRequireDefault(_MenuBarItem);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22869,16 +22887,16 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var MenuBar = function (_React$Component) {
-		_inherits(MenuBar, _React$Component);
+	var TitleBar = function (_React$Component) {
+		_inherits(TitleBar, _React$Component);
 
-		function MenuBar() {
-			_classCallCheck(this, MenuBar);
+		function TitleBar() {
+			_classCallCheck(this, TitleBar);
 
-			return _possibleConstructorReturn(this, (MenuBar.__proto__ || Object.getPrototypeOf(MenuBar)).apply(this, arguments));
+			return _possibleConstructorReturn(this, (TitleBar.__proto__ || Object.getPrototypeOf(TitleBar)).apply(this, arguments));
 		}
 
-		_createClass(MenuBar, [{
+		_createClass(TitleBar, [{
 			key: 'render',
 			value: function render() {
 
@@ -22889,7 +22907,47 @@
 						'div',
 						null,
 						'MICHAEL YOUNISS'
-					)
+					),
+					_react2.default.createElement(MenuBar, { menuItems: this.props.menuItems, handleClick: this.props.handleClick, currentView: this.props.currentView })
+				);
+			}
+		}]);
+
+		return TitleBar;
+	}(_react2.default.Component);
+
+	exports.default = TitleBar;
+
+
+	TitleBar.PropTypes = {
+		menuItems: _react2.default.PropTypes.array,
+		handleClick: _react2.default.PropTypes.func,
+		currentView: _react2.default.PropTypes.string
+	};
+
+	var MenuBar = function (_React$Component2) {
+		_inherits(MenuBar, _React$Component2);
+
+		function MenuBar() {
+			_classCallCheck(this, MenuBar);
+
+			return _possibleConstructorReturn(this, (MenuBar.__proto__ || Object.getPrototypeOf(MenuBar)).apply(this, arguments));
+		}
+
+		_createClass(MenuBar, [{
+			key: 'render',
+			value: function render() {
+				var _this3 = this;
+
+				var key = 0;
+
+				return _react2.default.createElement(
+					'div',
+					null,
+					this.props.menuItems.map(function (item) {
+						return _react2.default.createElement(_MenuBarItem2.default, { item: item, currentView: _this3.props.currentView,
+							handleClick: _this3.props.handleClick, key: key++ });
+					})
 				);
 			}
 		}]);
@@ -22897,19 +22955,115 @@
 		return MenuBar;
 	}(_react2.default.Component);
 
-	exports.default = MenuBar;
+	MenuBar.PropTypes = {
+		menuItmes: _react2.default.PropTypes.array,
+		handleClick: _react2.default.PropTypes.func,
+		currentView: _react2.default.PropTypes.string
+	};
 
 /***/ },
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Constants = __webpack_require__(182);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MenuBarItem = function (_React$Component) {
+	  _inherits(MenuBarItem, _React$Component);
+
+	  function MenuBarItem() {
+	    _classCallCheck(this, MenuBarItem);
+
+	    var _this = _possibleConstructorReturn(this, (MenuBarItem.__proto__ || Object.getPrototypeOf(MenuBarItem)).call(this));
+
+	    _this.state = { mouseHovering: false };
+	    return _this;
+	  }
+
+	  _createClass(MenuBarItem, [{
+	    key: 'handleMouseEnter',
+	    value: function handleMouseEnter() {
+	      this.setState({ mouseHovering: true });
+	    }
+	  }, {
+	    key: 'handleMouseLeave',
+	    value: function handleMouseLeave() {
+	      this.setState({ mouseHovering: false });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var activeItem = this.props.item.view === this.props.currentView;
+	      var menuItemStyle = {
+	        display: 'inline-block',
+	        width: '15%',
+	        fontWeight: '100',
+	        cursor: 'pointer'
+	      };
+
+	      activeItem ? menuItemStyle.color = _Constants.Colors.ACCENT_COLOR : menuItemStyle.color = _Constants.Colors.TEXT_COLOR;
+	      this.state.mouseHovering ? menuItemStyle.borderBottom = 'solid 2px ' + _Constants.Colors.ACCENT_COLOR : menuItemStyle.borderBottom = 'solid 2px transparent';
+
+	      return _react2.default.createElement(
+	        'div',
+	        { style: menuItemStyle,
+	          onClick: function onClick() {
+	            _this2.props.handleClick(_this2.props.item.view);
+	          } },
+	        _react2.default.createElement(
+	          'div',
+	          { onMouseEnter: this.handleMouseEnter.bind(this),
+	            onMouseLeave: this.handleMouseLeave.bind(this) },
+	          this.props.item.title
+	        )
+	      );
+	    }
+	  }]);
+
+	  return MenuBarItem;
+	}(_react2.default.Component);
+
+	exports.default = MenuBarItem;
+
+
+	MenuBarItem.PropTypes = {
+	  item: _react2.default.PropTypes.object,
+	  handleClick: _react2.default.PropTypes.func,
+	  currentView: _react2.default.PropTypes.string
+	};
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(187);
+	var content = __webpack_require__(188);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(189)(content, {});
+	var update = __webpack_require__(190)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -22926,10 +23080,10 @@
 	}
 
 /***/ },
-/* 187 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(188)();
+	exports = module.exports = __webpack_require__(189)();
 	// imports
 
 
@@ -22940,7 +23094,7 @@
 
 
 /***/ },
-/* 188 */
+/* 189 */
 /***/ function(module, exports) {
 
 	/*
@@ -22996,7 +23150,7 @@
 
 
 /***/ },
-/* 189 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import ProjectTileRow from './ProjectTileRow';
-import MenuBar from './MenuBar'
 
 export class ProjectView extends React.Component {
   render() {
@@ -48,7 +47,7 @@ export class ProjectView extends React.Component {
 }
 
 
-export class AboutMeView extends React.Component {
+export class AboutView extends React.Component {
   render() {
     return(
       <div>HELLO WORLD</div>
