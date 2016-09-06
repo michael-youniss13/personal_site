@@ -64,7 +64,7 @@
 
 	var _Constants = __webpack_require__(182);
 
-	__webpack_require__(187);
+	__webpack_require__(186);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22875,9 +22875,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _MenuBarItem = __webpack_require__(186);
+	var _MenuBarItem = __webpack_require__(190);
 
 	var _MenuBarItem2 = _interopRequireDefault(_MenuBarItem);
+
+	var _Constants = __webpack_require__(182);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22899,13 +22901,24 @@
 		_createClass(TitleBar, [{
 			key: 'render',
 			value: function render() {
+				var headerStyle = {
+					color: _Constants.Colors.TEXT_COLOR,
+					fontFamily: 'Helvetica, Sans-Serif',
+					textAlign: 'center',
+					width: '100%'
+				};
+
+				var titleStyle = {
+					fontSize: '50px',
+					fontWeight: '100'
+				};
 
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ style: headerStyle },
 					_react2.default.createElement(
 						'div',
-						null,
+						{ style: titleStyle },
 						'MICHAEL YOUNISS'
 					),
 					_react2.default.createElement(MenuBar, { menuItems: this.props.menuItems, handleClick: this.props.handleClick, currentView: this.props.currentView })
@@ -22965,105 +22978,13 @@
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Constants = __webpack_require__(182);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var MenuBarItem = function (_React$Component) {
-	  _inherits(MenuBarItem, _React$Component);
-
-	  function MenuBarItem() {
-	    _classCallCheck(this, MenuBarItem);
-
-	    var _this = _possibleConstructorReturn(this, (MenuBarItem.__proto__ || Object.getPrototypeOf(MenuBarItem)).call(this));
-
-	    _this.state = { mouseHovering: false };
-	    return _this;
-	  }
-
-	  _createClass(MenuBarItem, [{
-	    key: 'handleMouseEnter',
-	    value: function handleMouseEnter() {
-	      this.setState({ mouseHovering: true });
-	    }
-	  }, {
-	    key: 'handleMouseLeave',
-	    value: function handleMouseLeave() {
-	      this.setState({ mouseHovering: false });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-
-	      var activeItem = this.props.item.view === this.props.currentView;
-	      var menuItemStyle = {
-	        display: 'inline-block',
-	        width: '15%',
-	        fontWeight: '100',
-	        cursor: 'pointer'
-	      };
-
-	      activeItem ? menuItemStyle.color = _Constants.Colors.ACCENT_COLOR : menuItemStyle.color = _Constants.Colors.TEXT_COLOR;
-	      this.state.mouseHovering ? menuItemStyle.borderBottom = 'solid 2px ' + _Constants.Colors.ACCENT_COLOR : menuItemStyle.borderBottom = 'solid 2px transparent';
-
-	      return _react2.default.createElement(
-	        'div',
-	        { style: menuItemStyle,
-	          onClick: function onClick() {
-	            _this2.props.handleClick(_this2.props.item.view);
-	          } },
-	        _react2.default.createElement(
-	          'div',
-	          { onMouseEnter: this.handleMouseEnter.bind(this),
-	            onMouseLeave: this.handleMouseLeave.bind(this) },
-	          this.props.item.title
-	        )
-	      );
-	    }
-	  }]);
-
-	  return MenuBarItem;
-	}(_react2.default.Component);
-
-	exports.default = MenuBarItem;
-
-
-	MenuBarItem.PropTypes = {
-	  item: _react2.default.PropTypes.object,
-	  handleClick: _react2.default.PropTypes.func,
-	  currentView: _react2.default.PropTypes.string
-	};
-
-/***/ },
-/* 187 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(188);
+	var content = __webpack_require__(187);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(190)(content, {});
+	var update = __webpack_require__(189)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -23080,10 +23001,10 @@
 	}
 
 /***/ },
-/* 188 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(189)();
+	exports = module.exports = __webpack_require__(188)();
 	// imports
 
 
@@ -23094,7 +23015,7 @@
 
 
 /***/ },
-/* 189 */
+/* 188 */
 /***/ function(module, exports) {
 
 	/*
@@ -23150,7 +23071,7 @@
 
 
 /***/ },
-/* 190 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -23400,6 +23321,100 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Constants = __webpack_require__(182);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var MenuBarItem = function (_React$Component) {
+	  _inherits(MenuBarItem, _React$Component);
+
+	  function MenuBarItem() {
+	    _classCallCheck(this, MenuBarItem);
+
+	    var _this = _possibleConstructorReturn(this, (MenuBarItem.__proto__ || Object.getPrototypeOf(MenuBarItem)).call(this));
+
+	    _this.state = { mouseHovering: false };
+	    return _this;
+	  }
+
+	  _createClass(MenuBarItem, [{
+	    key: 'handleMouseEnter',
+	    value: function handleMouseEnter() {
+	      this.setState({ mouseHovering: true });
+	    }
+	  }, {
+	    key: 'handleMouseLeave',
+	    value: function handleMouseLeave() {
+	      this.setState({ mouseHovering: false });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var activeItem = this.props.item.view === this.props.currentView;
+	      var menuItemStyle = {
+	        display: 'inline-block',
+	        width: '17%',
+	        fontWeight: '100',
+	        cursor: 'pointer',
+	        textAlign: 'center',
+	        fontSize: '20px'
+	      };
+
+	      activeItem ? menuItemStyle.color = _Constants.Colors.ACCENT_COLOR : menuItemStyle.color = _Constants.Colors.TEXT_COLOR;
+	      this.state.mouseHovering ? menuItemStyle.borderBottom = 'solid 2px ' + _Constants.Colors.ACCENT_COLOR : menuItemStyle.borderBottom = 'solid 2px transparent';
+
+	      return _react2.default.createElement(
+	        'div',
+	        { style: menuItemStyle,
+	          onClick: function onClick() {
+	            _this2.props.handleClick(_this2.props.item.view);
+	          } },
+	        _react2.default.createElement(
+	          'div',
+	          { onMouseEnter: this.handleMouseEnter.bind(this),
+	            onMouseLeave: this.handleMouseLeave.bind(this) },
+	          this.props.item.title
+	        )
+	      );
+	    }
+	  }]);
+
+	  return MenuBarItem;
+	}(_react2.default.Component);
+
+	exports.default = MenuBarItem;
+
+
+	MenuBarItem.PropTypes = {
+	  item: _react2.default.PropTypes.object,
+	  handleClick: _react2.default.PropTypes.func,
+	  currentView: _react2.default.PropTypes.string
+	};
 
 /***/ }
 /******/ ]);

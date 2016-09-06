@@ -1,12 +1,25 @@
 import React from 'react';
 import MenuBarItem from './MenuBarItem';
 
+import { Colors } from '../../Constants';
+
 export default class TitleBar extends React.Component {
 	render() {
+		let headerStyle = {
+			color: Colors.TEXT_COLOR,
+			fontFamily: 'Helvetica, Sans-Serif',
+			textAlign: 'center',
+			width: '100%'
+		};
+
+		let titleStyle = {
+			fontSize: '50px',
+			fontWeight: '100'
+		};
 
 		return(
-			<div>
-				<div>MICHAEL YOUNISS</div>
+			<div style={headerStyle}>
+				<div style={titleStyle}>MICHAEL YOUNISS</div>
 				<MenuBar menuItems={this.props.menuItems} handleClick={this.props.handleClick} currentView={this.props.currentView} />
 			</div>
 		)
