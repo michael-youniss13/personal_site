@@ -39,6 +39,16 @@ export class ProjectView extends React.Component {
         imageURL: 'IBMLogo.png',
         description: 'I built a UI component in react for a chat client for user feedback',
         link: ''
+      },
+      {
+        tileName: 'Deck of Cards',
+        imageURL: 'DeckOfCards.png',
+        description: 'I built a virtual deck of cards which is  shuffleable and  dealable'
+      },
+      {
+        tileName: 'Website',
+        imageURL: 'BackgroundPhoto_1.png',
+        description: 'I built this entire website'
       }
     ]
 
@@ -58,10 +68,16 @@ export class AboutView extends React.Component {
     var diff = new Date(ageDiffInMs);
     var years = (diff.getUTCFullYear() - 1970);
     return(
-      <div style={{ paddingTop: '100px' }}>
+      <div style={{ paddingTop: '100px', backgroundColor: Colors.WHITE, width: '70%' }}>
         Welcome to my website. My name is Michael Youniss and I am {years} years old.
-        I am a senior at the University of Pennsylvania studying Logic, Information and Computation.
-        
+        I am a senior at the University of Pennsylvania and pursuing a Bachelors degree in Logic, Information and Computation.
+        The courses I completed for this degree focus on Math, Computer Science and Philosophy. Outside of the classroom I
+        enjoy working out, cooking meals, playing music or coding. When I am not a school I like to travel around the world as well as
+        explore various national parks.
+
+        I have coded this website myself using the following technologies: Javascript, React.js, Webpack, Babel, and Scss.
+
+        Feel free to look around and reach out to me  with any inquiries.
       </div>
     )
   }
@@ -79,10 +95,10 @@ export class FindMeView extends React.Component {
     }
     return(
       <div style={findMeViewStyle}>
-        <a className='find-me-row' href="mailto:michael.youniss13@gmail.com" ><MdEmail className='find-me-icon'/><div className='find-me-content'>michael.youniss13@gmail.com</div></a>
-        <div className='find-me-row'><FaPhoneSquare className='find-me-icon'/><div className='find-me-content'>(781) 801-5163</div></div>
-        <a href='https://github.com/michael-youniss13' target='_blank' className='find-me-row'><FaGithubSquare className='find-me-icon'/><div className='find-me-content'>Michael-Youniss13</div></a>
-        <a className='find-me-row' target='_blank' href='https://www.linkedin.com/profile/guided?startTask=ADD_POSITION&force=true&trk=hp-identity-ADD_POSITION'><FaLinkedinSquare className='find-me-icon'/><div className='find-me-content'>Michael Youniss</div></a>
+        <a className='find-me-box' href="mailto:michael.youniss13@gmail.com" ><MdEmail className='find-me-icon'/><div className='find-me-content'>michael.youniss13@gmail.com</div></a>
+        <div className='find-me-box'><FaPhoneSquare className='find-me-icon'/><div className='find-me-content'>(781) 801-5163</div></div>
+        <a href='https://github.com/michael-youniss13' target='_blank' className='find-me-box'><FaGithubSquare className='find-me-icon'/><div className='find-me-content'>Michael-Youniss13</div></a>
+        <a className='find-me-box' target='_blank' href='https://www.linkedin.com/in/michael-youniss-8639909a?trk=hp-identity-name'><FaLinkedinSquare className='find-me-icon'/><div className='find-me-content'>Michael Youniss</div></a>
       </div>
     )
   }

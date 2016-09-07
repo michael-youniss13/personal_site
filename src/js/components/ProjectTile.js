@@ -50,10 +50,10 @@ export default class ProjectTile extends React.Component {
     const TileBodyStyle = {
       width: '200px',
       height: '200px',
-      backgroundColor: Colors.PRIMARY_COLOR
+      backgroundColor: Colors.PRIMARY_COLOR,
     };
     const TileTitleStyle = {
-      backgroundColor: Colors.TERTIARY_COLOR,
+      backgroundColor: Colors.WHITE,
       height: '75px',
       textAlign: 'center',
       verticalAlign: 'middle',

@@ -9,7 +9,8 @@ export const Colors = {
 	SECONDARY_COLOR: 'rgb(56,80,205)',
 	SECONDARY_COLOR_LIGHT: 'rgba(56,80,205, .65)',
 	TERTIARY_COLOR: 'rgb(189,144,118)',
-	TERTIARY_COLOR_LIGHT: 'rgba(189,144,118, .65)'
+	TERTIARY_COLOR_LIGHT: 'rgba(189,144,118, .65)',
+	WHITE: 'rgb(255,255,255)'
 }
 
 export const Views = {
