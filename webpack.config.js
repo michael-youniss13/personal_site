@@ -19,7 +19,12 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
-      }
+      },
+      {
+       test: /\.(png|jpg)$/,
+       include: path.resolve(__dirname, 'src/img'),
+       loader: 'url-loader?limit=10000000'
+     }
     ],
   },
 };

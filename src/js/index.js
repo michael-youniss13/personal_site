@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ProjectView, AboutView, ContactView, ResumeView } from '../js/components/Views';
+import { ProjectView, AboutView, FindMeView, ResumeView } from '../js/components/Views';
 import TitleBar from './components/TitleBar'
 import { Colors, Views } from '../Constants'
 
@@ -17,12 +17,11 @@ class Webpage extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.currentView);
 
 		const MenuItems = [
 			{title: 'ABOUT', view: Views.ABOUT },
 			{title: 'PROJECTS', view: Views.PROJECTS },
-			{title: 'CONTACT', view: Views.CONTACT },
+			{title: 'FIND ME', view: Views.FIND_ME },
 			{title: 'RESUME', view: Views.RESUME }
 		];
 
@@ -32,7 +31,7 @@ class Webpage extends React.Component {
 				{this.state.currentView === Views.ABOUT && <AboutView />}
 				{this.state.currentView === Views.PROJECTS && <ProjectView />}
 				{this.state.currentView === Views.RESUME && <ResumeView />}
-				{this.state.currentView === Views.CONTACT && <ContactView />}
+				{this.state.currentView === Views.FIND_ME && <FindMeView />}
 			</div>
 		);
 	}

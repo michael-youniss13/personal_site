@@ -15,6 +15,6 @@ export const Colors = {
 export const Views = {
 	ABOUT: 'ABOUT',
 	PROJECTS: 'PROJECTS',
-	CONTACT: 'CONTACT',
+	FIND_ME: 'FIND_ME',
 	RESUME: 'RESUME'
 }

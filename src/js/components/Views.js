@@ -2,6 +2,11 @@ import React from 'react';
 
 import ProjectTileRow from './ProjectTileRow';
 
+import  { Colors } from '../../Constants'
+
+import { FaGithubSquare, FaPhoneSquare, FaSpotify, FaLinkedinSquare } from 'react-icons/lib/fa';
+import { MdEmail } from 'react-icons/lib/md';
+
 export class ProjectView extends React.Component {
   render() {
     const projectList = [
@@ -49,17 +54,36 @@ export class ProjectView extends React.Component {
 
 export class AboutView extends React.Component {
   render() {
+    var ageDiffInMs = Date.now() - (new Date('2/13/1995').getTime());
+    var diff = new Date(ageDiffInMs);
+    var years = (diff.getUTCFullYear() - 1970);
     return(
-      <div>HELLO WORLD</div>
+      <div style={{ paddingTop: '100px' }}>
+        Welcome to my website. My name is Michael Youniss and I am {years} years old.
+        I am a senior at the University of Pennsylvania studying Logic, Information and Computation.
+        
+      </div>
     )
   }
 }
 
 
-export class ContactView extends React.Component {
+export class FindMeView extends React.Component {
   render() {
+    let findMeViewStyle = {
+      color: Colors.PRIMARY_COLOR,
+      fontSize: '40px',
+      width: '100%',
+      textAlign: 'center',
+      paddingTop: '100px'
+    }
     return(
-      <div>HELLO WORLD</div>
+      <div style={findMeViewStyle}>
+        <a className='find-me-row' href="mailto:michael.youniss13@gmail.com" ><MdEmail className='find-me-icon'/><div className='find-me-content'>michael.youniss13@gmail.com</div></a>
+        <div className='find-me-row'><FaPhoneSquare className='find-me-icon'/><div className='find-me-content'>(781) 801-5163</div></div>
+        <a href='https://github.com/michael-youniss13' target='_blank' className='find-me-row'><FaGithubSquare className='find-me-icon'/><div className='find-me-content'>Michael-Youniss13</div></a>
+        <a className='find-me-row' target='_blank' href='https://www.linkedin.com/profile/guided?startTask=ADD_POSITION&force=true&trk=hp-identity-ADD_POSITION'><FaLinkedinSquare className='find-me-icon'/><div className='find-me-content'>Michael Youniss</div></a>
+      </div>
     )
   }
 }

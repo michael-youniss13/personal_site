@@ -6,7 +6,7 @@ export default class ProjectTileRow extends React.Component {
   render() {
     let key = 0;
     return(
-      <div style={{ textAlign: 'center', verticalAlign: 'center', paddingTop: '30px' }}>
+      <div style={{ textAlign: 'center', verticalAlign: 'center', paddingTop: '40px' }}>
         {
           this.props.projectList.map((project) => {
             return <ProjectTile tileName={project.tileName}

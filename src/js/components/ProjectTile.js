@@ -33,8 +33,6 @@ export default class ProjectTile extends React.Component {
   }
 
   render() {
-    console.log(Colors);
-    console.log(Colors.TEXT_COLOR);
     let TileStyle =  {
       display: 'inline-block',
       fontFamily: 'Helvetica, Sans-Sertif',
@@ -51,10 +49,11 @@ export default class ProjectTile extends React.Component {
 
     const TileBodyStyle = {
       width: '200px',
-      height: '200px'
+      height: '200px',
+      backgroundColor: Colors.PRIMARY_COLOR
     };
     const TileTitleStyle = {
-      backgroundColor: Colors.PRIMARY_COLOR_LIGHT,
+      backgroundColor: Colors.TERTIARY_COLOR,
       height: '75px',
       textAlign: 'center',
       verticalAlign: 'middle',
