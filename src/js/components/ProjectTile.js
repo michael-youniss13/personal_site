@@ -93,6 +93,11 @@ export default class ProjectTile extends React.Component {
 
 
 */
+    let linkHTML = (<div></div>);
+    if(typeof this.props.link !== 'undefined') {
+      if(this.props.link.type === 'download')
+      linkHTML = <a href={this.props.link.path} download>{this.props.link.content}</a>
+    }
 
     return(
       <div style={TileStyle}
@@ -103,6 +108,7 @@ export default class ProjectTile extends React.Component {
         </div>
         <div className={DescriptionClasses}>
           {this.props.description}
+          {linkHTML}
         </div>
         <div style={TileTitleStyle}>
           {this.props.tileName}
@@ -120,5 +126,7 @@ export default class ProjectTile extends React.Component {
 
 ProjectTile.PropTypes = {
   tileName: React.PropTypes.string,
-  imageURL: React.PropTypes.string
+  imageURL: React.PropTypes.string,
+  link: React.PropTypes.string,
+  link_path: React.PropTypes.string
 }

@@ -14,7 +14,11 @@ export class ProjectView extends React.Component {
         tileName:'Bit Coin Project',
         imageURL: 'BitCoinLogo.png',
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
-        link: 'Click here to read the paper'
+        link: {
+          type: 'download',
+          path: './src/img/pdf/bitcoin-final-paper-math-341.pdf',
+          content: 'Click here to read Paper'
+        }
       },
       {
         tileName:'Tetris Project',
