@@ -13,42 +13,42 @@ export class ProjectView extends React.Component {
       {
         tileName:'Bit Coin Project',
         imageURL: 'BitCoinLogo.png',
-        description: 'For a mathematical encryption class I wrote a paper about the mathematics underlying bitcoin',
+        description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
         link: 'Click here to read the paper'
       },
       {
         tileName:'Tetris Project',
         imageURL: 'TetrisLogo.png',
-        description: 'For a computer science class I programmed Tetris in Java',
+        description: 'As a final project for CIS 120: Programming Langugaes and Techniques, I coded Tetris in Java.',
         link: 'Click here to play'
       },
       {
         tileName:'Rocket Software Internship',
         imageURL: 'RocketSoftwareLogo.png',
-        description: 'The summers of 2013 and 2014 I worked on projects from mobile apps to network programming and researched big data',
+        description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.',
         link: ''
       },
       {
         tileName:'Pluralsight Internship',
         imageURL: 'PluralsightLogo.png',
-        description: 'During the summer of 2015 I worked on building a menu out for their web application',
+        description: 'During the summer of 2015 I worked on building a UI component for the Pluralsight web application. The component was a menu for navigating the application and I built it in Javascript using the React.js framework.',
         link: ''
       },
       {
         tileName:'IBM Internship',
         imageURL: 'IBMLogo.png',
-        description: 'I built a UI component in react for a chat client for user feedback',
+        description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.',
         link: ''
       },
       {
         tileName: 'Deck of Cards',
         imageURL: 'DeckOfCards.png',
-        description: 'I built a virtual deck of cards which is  shuffleable and  dealable'
+        description: 'In my free time I built a deck of playing cards in Java. The deck is allows the user to shuffle the cards, deal the cards, and simulate a game of war. The code can be found on my github page, which can be found in the \'Find Me\' tab.'
       },
       {
         tileName: 'Website',
-        imageURL: 'BackgroundPhoto_1.png',
-        description: 'I built this entire website'
+        imageURL: 'BackgroundPhoto_1.jpg',
+        description: 'Using Javascript, React.js, Webpack, Babel, and Scss I built this website. All the code can be found on my github page, which can be found in the \'Find Me\' tab'
       }
     ]
 
@@ -68,16 +68,16 @@ export class AboutView extends React.Component {
     var diff = new Date(ageDiffInMs);
     var years = (diff.getUTCFullYear() - 1970);
     return(
-      <div style={{ paddingTop: '100px', backgroundColor: Colors.WHITE, width: '70%' }}>
-        Welcome to my website. My name is Michael Youniss and I am {years} years old.
+      <div className='about-me'>
+        <p style={{ marginTop: 0 }}>Welcome to my website. My name is Michael Youniss and I am {years} years old.
         I am a senior at the University of Pennsylvania and pursuing a Bachelors degree in Logic, Information and Computation.
         The courses I completed for this degree focus on Math, Computer Science and Philosophy. Outside of the classroom I
-        enjoy working out, cooking meals, playing music or coding. When I am not a school I like to travel around the world as well as
-        explore various national parks.
+        enjoy trainging for marathons, cooking meals, playing music or coding. When I am not a school I like to travel around the world as well as
+        explore various national parks.</p>
 
-        I have coded this website myself using the following technologies: Javascript, React.js, Webpack, Babel, and Scss.
+        <p>I coded this website using the following technologies: Javascript, React.js, Webpack, Babel, and Scss.</p>
 
-        Feel free to look around and reach out to me  with any inquiries.
+        <p style={{ marginBottom: 0 }}>Feel free to look around and reach out to me  with any inquiries.</p>
       </div>
     )
   }
@@ -89,10 +89,10 @@ export class FindMeView extends React.Component {
     let findMeViewStyle = {
       color: Colors.PRIMARY_COLOR,
       fontSize: '40px',
-      width: '100%',
       textAlign: 'center',
       paddingTop: '100px'
     }
+
     return(
       <div style={findMeViewStyle}>
         <a className='find-me-box' href="mailto:michael.youniss13@gmail.com" ><MdEmail className='find-me-icon'/><div className='find-me-content'>michael.youniss13@gmail.com</div></a>

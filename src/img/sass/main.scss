@@ -7,6 +7,7 @@ $PRESSED_ACCENT_COLOR: rgba(231, 100, 63, 0.9);
 $HIGHLIGHT_COLOR: rgb(189,144,118);
 $WHITE: rgb(255,255,255);
 $PRESSED_WHITE: rgba(255, 255, 255, 0.9);
+$WHITE_LIGHT: rgba(255,255,255,.8);
 
 .body {
   margin: 0;
@@ -90,31 +91,41 @@ $PRESSED_WHITE: rgba(255, 255, 255, 0.9);
 
 .find-me-box {
   text-decoration: none;
-  width: 40%;
-  display: inline-block;
+  display: inline-flex;
   background-color: $WHITE;
   margin-right: 20px;
   box-shadow: 0 0 15px 2px rgba(0,0,0, 0.45);
   margin-top: 20px;
-
+  word-wrap: break-word;
 }
 
 .find-me-content {
   color: $TEXT_COLOR;
   font-size: 25px;
-  padding-left: 15px;
-  padding-top: 5px;
-  float: left;
   text-align: center;
   display: inline-block;
   font-weight: 100;
-  text-align: middle;
+  white-space: nowrap;
+  padding: 10px 5px 0 5px;
 }
 
 .find-me-icon {
   color: $PRIMARY_COLOR;
-  font-size: 40px;
+  font-size: 50px;
   padding-left: 1%;
-  float: left;
   display: inline-block;
+}
+
+.about-me {
+  background-color: $WHITE_LIGHT;
+  width: 70%;
+  position: fixed;
+  top: 100px;
+  left: 15%;
+  box-shadow: 0 0 15px 2px rgba(0,0,0, 0.45);
+  color: $TEXT_COLOR;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 20px;
+  word-wrap: break-word;
 }
