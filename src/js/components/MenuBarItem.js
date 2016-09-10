@@ -24,7 +24,7 @@ export default class MenuBarItem extends React.Component {
       fontWeight: '100',
       cursor: 'pointer',
       textAlign: 'center',
-      fontSize: '20px'
+      fontSize: '1.2em'
     };
 
     activeItem ? menuItemStyle.color = Colors.ACCENT_COLOR : menuItemStyle.color = Colors.TEXT_COLOR;

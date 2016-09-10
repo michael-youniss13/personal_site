@@ -95,8 +95,11 @@ export default class ProjectTile extends React.Component {
 */
     let linkHTML = (<div></div>);
     if(typeof this.props.link !== 'undefined') {
-      if(this.props.link.type === 'download')
-      linkHTML = <a href={this.props.link.path} download>{this.props.link.content}</a>
+      if(this.props.link.type === 'download') {
+        linkHTML = <p><a href={this.props.link.href} target='_0'>{this.props.link.content}</a></p>
+      } else if (this.props.link.type === 'link') {
+        linkHTML = <p><a href={this.props.link.href} target='_0'>{this.props.link.content}</a></p>
+      }
     }
 
     return(

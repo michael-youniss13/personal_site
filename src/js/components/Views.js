@@ -3,7 +3,6 @@ import React from 'react';
 import ProjectTileRow from './ProjectTileRow';
 
 import  { Colors } from '../../Constants'
-
 import { FaGithubSquare, FaPhoneSquare, FaSpotify, FaLinkedinSquare } from 'react-icons/lib/fa';
 import { MdEmail } from 'react-icons/lib/md';
 
@@ -16,7 +15,7 @@ export class ProjectView extends React.Component {
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
         link: {
           type: 'download',
-          path: './src/img/pdf/bitcoin-final-paper-math-341.pdf',
+          href: './src/img/pdf/bitcoin-final-paper-math-341.pdf',
           content: 'Click here to read Paper'
         }
       },
@@ -24,38 +23,48 @@ export class ProjectView extends React.Component {
         tileName:'Tetris Project',
         imageURL: 'TetrisLogo.png',
         description: 'As a final project for CIS 120: Programming Langugaes and Techniques, I coded Tetris in Java.',
-        link: 'Click here to play'
+        link: {
+          type: 'link',
+          href: 'https://github.com/michael-youniss13/Tetris',
+          content: 'Click here to view Git repository'
+        }
       },
       {
         tileName:'Rocket Software Internship',
         imageURL: 'RocketSoftwareLogo.png',
-        description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.',
-        link: ''
+        description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.'
       },
       {
         tileName:'Pluralsight Internship',
         imageURL: 'PluralsightLogo.png',
-        description: 'During the summer of 2015 I worked on building a UI component for the Pluralsight web application. The component was a menu for navigating the application and I built it in Javascript using the React.js framework.',
-        link: ''
+        description: 'During the summer of 2015 I worked on building a UI component for the Pluralsight web application. The component was a menu for navigating the application and I built it in Javascript using the React.js framework.'
       },
       {
         tileName:'IBM Internship',
         imageURL: 'IBMLogo.png',
-        description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.',
-        link: ''
+        description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.'
       },
       {
         tileName: 'Deck of Cards',
         imageURL: 'DeckOfCards.png',
-        description: 'In my free time I built a deck of playing cards in Java. The deck is allows the user to shuffle the cards, deal the cards, and simulate a game of war. The code can be found on my github page, which can be found in the \'Find Me\' tab.'
+        description: 'In my free time I built a deck of playing cards in Java. The deck is allows the user to shuffle the cards, deal the cards, and simulate a game of war.',
+        link: {
+          type: 'link',
+          href: 'https://github.com/michael-youniss13/Cards',
+          content: 'Click here to view Git repository'
+        }
       },
       {
         tileName: 'Website',
-        imageURL: 'BackgroundPhoto_1.jpg',
-        description: 'Using Javascript, React.js, Webpack, Babel, and Scss I built this website. All the code can be found on my github page, which can be found in the \'Find Me\' tab'
+        imageURL: 'Background.png',
+        description: 'Using Javascript, React.js, Webpack, Babel, and Scss I built this website. All the code can be found on my github page, which can be found in the \'Find Me\' tab',
+        link: {
+          type: 'link',
+          href: 'https://github.com/michael-youniss13/michael-youniss13.github.io',
+          content: 'Click here to view Git repository'
+        }
       }
     ]
-
 
     return(
       <div style={{ textAlign: 'center', verticalAlign: 'center', paddingTop: '30px' }}>
@@ -73,15 +82,20 @@ export class AboutView extends React.Component {
     var years = (diff.getUTCFullYear() - 1970);
     return(
       <div className='about-me'>
-        <p style={{ marginTop: 0 }}>Welcome to my website. My name is Michael Youniss and I am {years} years old.
-        I am a senior at the University of Pennsylvania and pursuing a Bachelors degree in Logic, Information and Computation.
-        The courses I completed for this degree focus on Math, Computer Science and Philosophy. Outside of the classroom I
-        enjoy trainging for marathons, cooking meals, playing music or coding. When I am not a school I like to travel around the world as well as
-        explore various national parks.</p>
+        <div className='about-me__writeup'>
+          <p style={{ marginTop: 0 }}>Welcome to my website. My name is Michael Youniss and I am {years} years old.
+          I am a senior at the University of Pennsylvania and pursuing a Bachelors degree in Logic, Information and Computation.
+          The courses I completed for this degree focus on Math, Computer Science and Philosophy. Outside of the classroom I
+          enjoy trainging for marathons, cooking meals, playing music or coding. When I am not a school I like to travel around the world as well as
+          explore various national parks.</p>
 
-        <p>I coded this website using the following technologies: Javascript, React.js, Webpack, Babel, and Scss.</p>
+          <p>I coded this website using the following technologies: Javascript, React.js, Webpack, Babel, and Scss.</p>
 
-        <p style={{ marginBottom: 0 }}>Feel free to look around and reach out to me  with any inquiries.</p>
+          <p style={{ marginBottom: 0 }}>Feel free to look around and reach out to me  with any inquiries.</p>
+        </div>
+        <div>
+          <img className='about-me__photo' src='src/img/photos/me.jpg' />
+        </div>
       </div>
     )
   }
@@ -111,7 +125,7 @@ export class FindMeView extends React.Component {
 export class ResumeView extends React.Component {
   render() {
     return(
-      <div>HELLO WORLD</div>
+      <img src='src/img/photos/Resume.jpg' className='resume' />
     )
   }
 }

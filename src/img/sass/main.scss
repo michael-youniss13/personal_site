@@ -7,7 +7,7 @@ $PRESSED_ACCENT_COLOR: rgba(231, 100, 63, 0.9);
 $HIGHLIGHT_COLOR: rgb(189,144,118);
 $WHITE: rgb(255,255,255);
 $PRESSED_WHITE: rgba(255, 255, 255, 0.9);
-$WHITE_LIGHT: rgba(255,255,255,.8);
+$WHITE_LIGHT: rgba(255,255,255,.75);
 
 .body {
   margin: 0;
@@ -15,11 +15,8 @@ $WHITE_LIGHT: rgba(255,255,255,.8);
 
 .root  {
   font-family: Helvetica, Sans-Serif;
-  background: url(../photos/BackgroundPhoto_1.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  min-height: 1024px;
+  background: url(../photos/Background.png) center center fixed;
+  min-height: 100vh;
   min-width: 1024px;
   overflow: hidden;
   margin: 0;
@@ -44,11 +41,14 @@ $WHITE_LIGHT: rgba(255,255,255,.8);
 }
 
 .tile {
-  transition: height 300ms ease-in;
+  transition: height 200ms ease-in;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .tile--expanded {
-  height: 200px;
+  height: 175px;
   overflow: hidden;
   background-color: $WHITE;
 }
@@ -57,10 +57,11 @@ $WHITE_LIGHT: rgba(255,255,255,.8);
   height: 0px;
   overflow-y: hidden;
   background-color: $WHITE;
+  padding: 0;
 }
 
 .button {
-  transition: transform 300ms, top 300ms ease-in;
+  transition: transform 200ms, top 200ms ease-in;
   font-size: 35px;
   border-radius: 20px;
   color: $WHITE;
@@ -117,15 +118,40 @@ $WHITE_LIGHT: rgba(255,255,255,.8);
 }
 
 .about-me {
+  display: inline-flex;
+  min-height: 0px;
+}
+
+.about-me__writeup {
   background-color: $WHITE_LIGHT;
-  width: 70%;
-  position: fixed;
-  top: 100px;
-  left: 15%;
+  width: 50%;
   box-shadow: 0 0 15px 2px rgba(0,0,0, 0.45);
   color: $TEXT_COLOR;
   font-size: 20px;
   line-height: 30px;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   word-wrap: break-word;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 110px;
+  margin-bottom: 0px;
+
+}
+
+.about-me__photo {
+  display: inline-block;
+  margin-left: 10%;
+  width: 50vh;
+  border-radius: 25vh;
+  box-shadow: 0 0 15px 2px rgba(0,0,0, 0.45);
+  margin-top: 110px;
+
+}
+
+.resume {
+  position: fixed;
+  top: 100px;
+  right: 15%;
+  width: 70%;
+  height: 85vh;
 }

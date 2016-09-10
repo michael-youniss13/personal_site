@@ -6,7 +6,7 @@ import { Colors } from '../../Constants';
 export default class TitleBar extends React.Component {
 	render() {
 		let titleStyle = {
-			fontSize: '50px',
+			fontSize: '3.2em',
 			fontWeight: '100'
 		};
 
