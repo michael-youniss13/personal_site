@@ -10,59 +10,68 @@ export class ProjectView extends React.Component {
   render() {
     const projectList = [
       {
-        tileName:'Bit Coin Project',
+        tileName:'Bit Coin Paper',
         imageURL: 'BitCoinLogo.png',
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
-        link: {
+        link: [{
           type: 'download',
           href: './src/img/pdf/bitcoin-final-paper-math-341.pdf',
-          content: 'Click here to read Paper'
-        }
+          content: 'Read Paper'
+        }]
       },
       {
         tileName:'Tetris Project',
         imageURL: 'TetrisLogo.png',
         description: 'As a final project for CIS 120: Programming Langugaes and Techniques, I coded Tetris in Java.',
-        link: {
+        link: [{
           type: 'link',
           href: 'https://github.com/michael-youniss13/Tetris',
-          content: 'Click here to view Git repository'
-        }
+          content: 'View Git repository'
+        },
+        {
+          type: 'download',
+          href: 'src/img/jar/Tetris.jar',
+          content: 'Download game'
+        }]
       },
       {
         tileName:'Rocket Software Internship',
         imageURL: 'RocketSoftwareLogo.png',
-        description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.'
+        description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.',
+        link: []
+
       },
       {
         tileName:'Pluralsight Internship',
         imageURL: 'PluralsightLogo.png',
-        description: 'During the summer of 2015 I worked on building a UI component for the Pluralsight web application. The component was a menu for navigating the application and I built it in Javascript using the React.js framework.'
+        description: 'During the summer of 2015 I built a UI component for the Pluralsight web application. The component was a menu for navigating the application. I used the React.js Javascript framework to build the component.',
+        link: []
       },
       {
         tileName:'IBM Internship',
         imageURL: 'IBMLogo.png',
-        description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.'
+        description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.',
+        link: []
       },
       {
-        tileName: 'Deck of Cards',
+        tileName: 'Game of War',
         imageURL: 'DeckOfCards.png',
-        description: 'In my free time I built a deck of playing cards in Java. The deck is allows the user to shuffle the cards, deal the cards, and simulate a game of war.',
-        link: {
+        description: 'In my free time I built a deck of playing cards in Java. I incorporated shuffling and dealing into the deck of cards. Lastly, I used the deck of cards to build a simple game of war on the terminal.',
+        link: [{
           type: 'link',
           href: 'https://github.com/michael-youniss13/Cards',
-          content: 'Click here to view Git repository'
-        }
+          content: 'View Git repository'
+        }]
       },
       {
         tileName: 'Website',
         imageURL: 'Background.png',
-        description: 'Using Javascript, React.js, Webpack, Babel, and Scss I built this website. All the code can be found on my github page, which can be found in the \'Find Me\' tab',
-        link: {
+        description: 'Using Javascript, React.js, Webpack, Babel, and Scss I built this website.',
+        link: [{
           type: 'link',
           href: 'https://github.com/michael-youniss13/michael-youniss13.github.io',
-          content: 'Click here to view Git repository'
-        }
+          content: 'View Git repository'
+        }]
       }
     ]
 
@@ -125,7 +134,10 @@ export class FindMeView extends React.Component {
 export class ResumeView extends React.Component {
   render() {
     return(
-      <img src='src/img/photos/Resume.jpg' className='resume' />
+      <div className='resume'>
+        <img src='src/img/photos/Resume.jpg' className='resume__pic' />
+        <a className='resume-download' href='src/img/pdf/Resume.pdf' download target='_0'> Download My Resume </a>
+      </div>
     )
   }
 }

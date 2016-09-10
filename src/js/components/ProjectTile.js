@@ -50,7 +50,7 @@ export default class ProjectTile extends React.Component {
     const TileBodyStyle = {
       width: '200px',
       height: '200px',
-      backgroundColor: Colors.PRIMARY_COLOR,
+      backgroundColor: Colors.WHITE,
     };
     const TileTitleStyle = {
       backgroundColor: Colors.WHITE,
@@ -93,15 +93,6 @@ export default class ProjectTile extends React.Component {
 
 
 */
-    let linkHTML = (<div></div>);
-    if(typeof this.props.link !== 'undefined') {
-      if(this.props.link.type === 'download') {
-        linkHTML = <p><a href={this.props.link.href} target='_0'>{this.props.link.content}</a></p>
-      } else if (this.props.link.type === 'link') {
-        linkHTML = <p><a href={this.props.link.href} target='_0'>{this.props.link.content}</a></p>
-      }
-    }
-
     return(
       <div style={TileStyle}
            onMouseEnter={this.onTileEnter.bind(this)}
@@ -111,7 +102,15 @@ export default class ProjectTile extends React.Component {
         </div>
         <div className={DescriptionClasses}>
           {this.props.description}
-          {linkHTML}
+          {this.props.link.map((link) => {
+            if(link.type === 'download') {
+              return <p><a href={link.href} target='_0'>{link.content}</a></p>;
+            } else if (link.type === 'link') {
+              return <p><a href={link.href} target='_0'>{link.content}</a></p>;
+            } else  {
+              return <div></div>
+            }
+          })}
         </div>
         <div style={TileTitleStyle}>
           {this.props.tileName}
