@@ -103,7 +103,7 @@ export class AboutView extends React.Component {
           <p style={{ marginBottom: 0 }}>Feel free to look around and reach out to me  with any inquiries.</p>
         </div>
         <div>
-          <img className='about-me__photo' src='src/img/photos/me.jpg' />
+          <img className='about-me__photo' src='src/img/photos/me.JPG' />
         </div>
       </div>
     )
