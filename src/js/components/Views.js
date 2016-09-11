@@ -95,7 +95,7 @@ export class AboutView extends React.Component {
           <p style={{ marginTop: 0 }}>Welcome to my website. My name is Michael Youniss and I am {years} years old.
           I am a senior at the University of Pennsylvania and pursuing a Bachelors degree in Logic, Information and Computation.
           The courses I completed for this degree focus on Math, Computer Science and Philosophy. Outside of the classroom I
-          enjoy trainging for marathons, cooking meals, playing music or coding. When I am not a school I like to travel around the world as well as
+          enjoy training for marathons, cooking meals, playing music or coding. When I am not at school I like to travel around the world as well as
           explore various national parks.</p>
 
           <p>I coded this website using the following technologies: Javascript, React.js, Webpack, Babel, and Scss.</p>
