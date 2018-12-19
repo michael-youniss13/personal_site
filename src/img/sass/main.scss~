@@ -148,7 +148,7 @@ $WHITE_LIGHT: rgba(255,255,255,.75);
   width: 50%;
   border-radius: 25vh;
   box-shadow: 0 0 15px 2px rgba(0,0,0, 0.45);
-  margin-top: 25%;
+  margin-top: 35%;
 
 }
 
