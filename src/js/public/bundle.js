@@ -22088,7 +22088,7 @@
 	        description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.',
 	        link: []
 	      }, {
-	        tileName: 'Bit Coin Paper',
+	        tileName: 'Bitcoin Paper',
 	        imageURL: 'BitCoinLogo.png',
 	        description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
 	        link: [{
@@ -22218,20 +22218,17 @@
 	        _react2.default.createElement(
 	          'a',
 	          { className: 'find-me-box', href: 'mailto:michael.youniss13@gmail.com' },
-	          _react2.default.createElement(_md.MdEmail, { className: 'find-me-icon' }),
-	          _react2.default.createElement('div', { className: 'find-me-content' })
+	          _react2.default.createElement(_md.MdEmail, { className: 'find-me-icon' })
 	        ),
 	        _react2.default.createElement(
 	          'a',
 	          { href: 'https://github.com/michael-youniss13', target: '_blank', className: 'find-me-box' },
-	          _react2.default.createElement(_fa.FaGithubSquare, { className: 'find-me-icon' }),
-	          _react2.default.createElement('div', { className: 'find-me-content' })
+	          _react2.default.createElement(_fa.FaGithubSquare, { className: 'find-me-icon' })
 	        ),
 	        _react2.default.createElement(
 	          'a',
 	          { className: 'find-me-box', target: '_blank', href: 'https://www.linkedin.com/in/michael-youniss-8639909a?trk=hp-identity-name' },
-	          _react2.default.createElement(_fa.FaLinkedinSquare, { className: 'find-me-icon' }),
-	          _react2.default.createElement('div', { className: 'find-me-content' })
+	          _react2.default.createElement(_fa.FaLinkedinSquare, { className: 'find-me-icon' })
 	        )
 	      );
 	    }
@@ -22255,12 +22252,12 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'resume' },
-	        _react2.default.createElement('img', { src: 'src/img/photos/Resume.jpg', className: 'resume__pic' }),
 	        _react2.default.createElement(
 	          'a',
-	          { className: 'resume-download', href: 'src/img/pdf/Resume.pdf', download: true, target: '_0' },
-	          ' Download My Resume '
-	        )
+	          { href: 'src/img/pdf/Resume.pdf', className: 'resume-download', download: true, target: '_0' },
+	          _react2.default.createElement(_fa.FaDownload, { className: 'download-button' })
+	        ),
+	        _react2.default.createElement('img', { src: 'src/img/photos/Resume.jpg', className: 'resume__pic' })
 	      );
 	    }
 	  }]);
@@ -22311,7 +22308,7 @@
 	      var key = 0;
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { textAlign: 'center', verticalAlign: 'center', paddingTop: '40px' } },
+	        { style: { textAlign: 'center', verticalAlign: 'middle', paddingTop: '8%' } },
 	        this.props.projectList.map(function (project) {
 	          return _react2.default.createElement(_ProjectTile2.default, { tileName: project.tileName,
 	            imageURL: project.imageURL,
@@ -22361,7 +22358,7 @@
 
 	var _Constants = __webpack_require__(204);
 
-	var _arrowDropDown = __webpack_require__(886);
+	var _arrowDropDown = __webpack_require__(205);
 
 	var _arrowDropDown2 = _interopRequireDefault(_arrowDropDown);
 
@@ -23799,19 +23796,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var MdArrowDropDownCircle = function MdArrowDropDownCircle(props) {
+	var MdArrowDropDown = function MdArrowDropDown(props) {
 	    return _react2.default.createElement(
 	        _reactIconBase2.default,
 	        _extends({ viewBox: '0 0 40 40' }, props),
 	        _react2.default.createElement(
 	            'g',
 	            null,
-	            _react2.default.createElement('path', { d: 'm20 23.4l6.6-6.8h-13.2z m0-20q6.9 0 11.8 4.8t4.8 11.8-4.8 11.8-11.8 4.8-11.8-4.8-4.8-11.8 4.8-11.8 11.8-4.8z' })
+	            _react2.default.createElement('path', { d: 'm11.6 16.6h16.8l-8.4 8.4z' })
 	        )
 	    );
 	};
 
-	exports.default = MdArrowDropDownCircle;
+	exports.default = MdArrowDropDown;
 	module.exports = exports['default'];
 
 /***/ }),
@@ -50493,11 +50490,11 @@
 
 	var _arrowDownward2 = _interopRequireDefault(_arrowDownward);
 
-	var _arrowDropDownCircle = __webpack_require__(205);
+	var _arrowDropDownCircle = __webpack_require__(886);
 
 	var _arrowDropDownCircle2 = _interopRequireDefault(_arrowDropDownCircle);
 
-	var _arrowDropDown = __webpack_require__(886);
+	var _arrowDropDown = __webpack_require__(205);
 
 	var _arrowDropDown2 = _interopRequireDefault(_arrowDropDown);
 
@@ -56865,19 +56862,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var MdArrowDropDown = function MdArrowDropDown(props) {
+	var MdArrowDropDownCircle = function MdArrowDropDownCircle(props) {
 	    return _react2.default.createElement(
 	        _reactIconBase2.default,
 	        _extends({ viewBox: '0 0 40 40' }, props),
 	        _react2.default.createElement(
 	            'g',
 	            null,
-	            _react2.default.createElement('path', { d: 'm11.6 16.6h16.8l-8.4 8.4z' })
+	            _react2.default.createElement('path', { d: 'm20 23.4l6.6-6.8h-13.2z m0-20q6.9 0 11.8 4.8t4.8 11.8-4.8 11.8-11.8 4.8-11.8-4.8-4.8-11.8 4.8-11.8 11.8-4.8z' })
 	        )
 	    );
 	};
 
-	exports.default = MdArrowDropDown;
+	exports.default = MdArrowDropDownCircle;
 	module.exports = exports['default'];
 
 /***/ }),
@@ -90217,7 +90214,7 @@
 	var content = __webpack_require__(1785);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(1788)(content, {});
+	var update = __webpack_require__(1787)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -90242,7 +90239,7 @@
 
 
 	// module
-	exports.push([module.id, ".body {\n  margin: 0; }\n\n.root {\n  font-family: Helvetica, Sans-Serif;\n  min-height: 100vh;\n  min-width: 1024px;\n  overflow: hidden;\n  margin: 0; }\n\n.frosted-glass {\n  position: fixed;\n  height: 85px;\n  width: 100%;\n  overflow: hidden;\n  z-index: 4;\n  top: 1vh;\n  background-color: rgba(130, 179, 201, 0.7); }\n\n.title-bar {\n  color: black;\n  text-align: center;\n  width: 100%;\n  height: 85px;\n  position: fixed;\n  top: 1vh;\n  z-index: 5; }\n\n.tile {\n  transition: height 200ms ease-in;\n  text-align: left;\n  box-shadow: inset 0px 10px 10px -5px rgba(0, 0, 0, 0.5); }\n\n.tile--expanded {\n  height: 200px;\n  padding-top: 0px;\n  padding-left: 5px;\n  overflow: hidden;\n  background-color: white;\n  box-shadow: inset 0px 10px 10px -5px rgba(0, 0, 0, 0.5); }\n\n.tile--condensed {\n  height: 0px;\n  padding-top: 0px;\n  padding-left: 5px;\n  overflow-y: hidden;\n  background-color: white; }\n\n.button {\n  transition: transform 200ms, top 200ms ease-in;\n  font-size: 35px;\n  border-radius: 20px;\n  color: black;\n  position: relative;\n  left: 10vh;\n  top: -2vh;\n  background-color: #ffcc80;\n  cursor: pointer; }\n\n.button--pressed {\n  box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.1);\n  background-color: #ca9b52;\n  color: black; }\n\n.button--unpressed {\n  box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.1); }\n\n.button--expanded {\n  transform: rotate(180deg);\n  transform-origin: 50% 50%; }\n\n.find-me-box {\n  text-decoration: none;\n  display: inline-flex;\n  background-color: white;\n  margin-right: 20px;\n  margin-top: 20px;\n  word-wrap: break-word; }\n\n.find-me-content {\n  color: black;\n  font-size: 25px;\n  text-align: center;\n  display: inline-block;\n  font-weight: 100;\n  white-space: nowrap;\n  padding: 10px 5px 0 5px; }\n\n.find-me-icon {\n  color: #b3e5fc;\n  font-size: 30vh;\n  padding-left: 1%;\n  margin-left: 3%;\n  margin-right: 3%;\n  display: inline-block; }\n\n.about-me {\n  display: inline-flex;\n  min-height: 0px; }\n\n.about-me__writeup {\n  width: 50%;\n  color: black;\n  font-size: 20px;\n  line-height: 30px;\n  padding: 20px 20px 0px 20px;\n  word-wrap: break-word;\n  display: inline-block;\n  margin-left: 5%;\n  margin-top: 110px;\n  margin-bottom: 0px; }\n\n.about-me__photo-wrapper {\n  width: 50%; }\n\n.about-me__photo {\n  display: inline-block;\n  margin-left: 25%;\n  width: 50%;\n  margin-top: 25%; }\n\n.resume {\n  display: inline-flex; }\n\n.resume-download {\n  display: inline-block;\n  text-decoration: none;\n  background-color: white;\n  color: black;\n  width: 15%;\n  font-size: 30px;\n  text-align: center;\n  vertical-align: middle;\n  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.45);\n  position: fixed;\n  top: 350px;\n  right: 15%;\n  padding-top: 5px; }\n\n.resume__pic {\n  position: fixed;\n  top: 100px;\n  left: 15%;\n  height: 85vh;\n  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.45);\n  display: inline-block; }\n", ""]);
+	exports.push([module.id, ".body {\n  margin: 0; }\n\n.root {\n  font-family: Helvetica, Sans-Serif;\n  min-height: 100vh;\n  min-width: 1024px;\n  overflow: hidden;\n  margin: 0; }\n\n.frosted-glass {\n  position: fixed;\n  height: 85px;\n  width: 100%;\n  overflow: hidden;\n  z-index: 4;\n  top: 1vh;\n  background-color: rgba(130, 179, 201, 0.7); }\n\n.title-bar {\n  color: black;\n  text-align: center;\n  width: 100%;\n  height: 85px;\n  position: fixed;\n  top: 1vh;\n  z-index: 5; }\n\n.tile {\n  transition: height 200ms ease-in;\n  text-align: left;\n  box-shadow: inset 0px 10px 10px -5px rgba(0, 0, 0, 0.5); }\n\n.tile--expanded {\n  height: 200px;\n  padding-top: 0px;\n  padding-left: 5px;\n  overflow: hidden;\n  background-color: white;\n  box-shadow: inset 0px 10px 10px -5px rgba(0, 0, 0, 0.5); }\n\n.tile--condensed {\n  height: 0px;\n  padding-top: 0px;\n  padding-left: 5px;\n  overflow-y: hidden;\n  background-color: white; }\n\n.button {\n  transition: transform 200ms, top 200ms ease-in;\n  font-size: 35px;\n  border-radius: 20px;\n  color: black;\n  position: relative;\n  left: 35%;\n  top: -10px;\n  background-color: #ffcc80;\n  cursor: pointer; }\n\n.button--pressed {\n  box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.1);\n  background-color: #ca9b52;\n  color: black; }\n\n.button--unpressed {\n  box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.1); }\n\n.button--expanded {\n  transform: rotate(180deg);\n  transform-origin: 50% 50%; }\n\n.find-me-box {\n  text-decoration: none;\n  display: inline-flex;\n  background-color: white;\n  margin-right: 20px;\n  margin-top: 20px;\n  word-wrap: break-word; }\n\n.find-me-content {\n  color: black;\n  font-size: 25px;\n  text-align: center;\n  display: inline-block;\n  font-weight: 100;\n  white-space: nowrap;\n  padding: 10px 5px 0 5px; }\n\n.find-me-icon {\n  color: #b3e5fc;\n  font-size: 30vh;\n  padding-left: 1%;\n  margin-left: 3%;\n  margin-right: 3%;\n  display: inline-block; }\n\n.about-me {\n  display: inline-flex;\n  min-height: 0px; }\n\n.about-me__writeup {\n  width: 50%;\n  color: black;\n  font-size: 20px;\n  line-height: 30px;\n  padding: 20px 20px 0px 20px;\n  word-wrap: break-word;\n  display: inline-block;\n  margin-left: 5%;\n  margin-top: 110px;\n  margin-bottom: 0px; }\n\n.about-me__photo-wrapper {\n  width: 50%; }\n\n.about-me__photo {\n  display: inline-block;\n  margin-left: 25%;\n  width: 50%;\n  margin-top: 25%; }\n\n.resume {\n  display: block;\n  margin-top: 11%; }\n\n.resume-download {\n  margin-left: 75%;\n  display: inline-block; }\n\n.resume__pic {\n  width: 80%;\n  margin: auto;\n  display: block; }\n\n.download-button {\n  color: #ca9b52;\n  font-size: 50px;\n  display: block; }\n", ""]);
 
 	// exports
 
@@ -90304,8 +90301,7 @@
 
 
 /***/ }),
-/* 1787 */,
-/* 1788 */
+/* 1787 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*

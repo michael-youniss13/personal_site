@@ -76,8 +76,8 @@ $WHITE_LIGHT: rgba(255,255,255,.75);
   border-radius: 20px;
   color: $TEXT_COLOR;
   position: relative;
-  left: 10vh;
-  top: -2vh;
+  left: 35%;
+  top: -10px;
   background-color: $SECONDARY_COLOR;
   cursor: pointer;
 }
@@ -160,30 +160,23 @@ $WHITE_LIGHT: rgba(255,255,255,.75);
 }
 
 .resume {
-  display: inline-flex;
+  display: block;
+  margin-top:11%;
 }
 
 .resume-download {
+  margin-left:75%;
   display: inline-block;
-  text-decoration: none;
-  background-color: $WHITE;
-  color: $TEXT_COLOR;
-  width: 15%;
-  font-size: 30px;
-  text-align: center;
-  vertical-align: middle;
-  box-shadow: 0 0 15px 2px rgba(0,0,0, 0.45);
-  position: fixed;
-  top: 350px;
-  right: 15%;
-  padding-top: 5px;
-
 }
+
 .resume__pic {
-  position: fixed;
-  top: 100px;
-  left: 15%;
-  height: 85vh;
-  box-shadow: 0 0 15px 2px rgba(0,0,0, 0.45);
-  display: inline-block;
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.download-button {
+  color: $SECONDARY_COLOR_DARK;
+  font-size: 50px;
+  display: block;
 }

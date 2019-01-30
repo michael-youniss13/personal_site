@@ -5,6 +5,7 @@ import ProjectTileRow from './ProjectTileRow';
 import  { Colors } from '../../Constants'
 import { FaGithubSquare, FaPhoneSquare, FaSpotify, FaLinkedinSquare } from 'react-icons/lib/fa';
 import { MdEmail } from 'react-icons/lib/md';
+import { FaDownload } from 'react-icons/lib/fa'
 
 export class ProjectView extends React.Component {
   render() {
@@ -26,7 +27,7 @@ export class ProjectView extends React.Component {
         link: []
       },
       {
-        tileName:'Bit Coin Paper',
+        tileName:'Bitcoin Paper',
         imageURL: 'BitCoinLogo.png',
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
         link: [{
@@ -122,9 +123,9 @@ export class FindMeView extends React.Component {
 
     return(
       <div style={findMeViewStyle}>
-        <a className='find-me-box' href="mailto:michael.youniss13@gmail.com" ><MdEmail className='find-me-icon'/><div className='find-me-content'></div></a>
-        <a href='https://github.com/michael-youniss13' target='_blank' className='find-me-box'><FaGithubSquare className='find-me-icon'/><div className='find-me-content'></div></a>
-        <a className='find-me-box' target='_blank' href='https://www.linkedin.com/in/michael-youniss-8639909a?trk=hp-identity-name'><FaLinkedinSquare className='find-me-icon'/><div className='find-me-content'></div></a>
+        <a className='find-me-box' href="mailto:michael.youniss13@gmail.com" ><MdEmail className='find-me-icon'/></a>
+        <a href='https://github.com/michael-youniss13' target='_blank' className='find-me-box'><FaGithubSquare className='find-me-icon'/></a>
+        <a className='find-me-box' target='_blank' href='https://www.linkedin.com/in/michael-youniss-8639909a?trk=hp-identity-name'><FaLinkedinSquare className='find-me-icon'/></a>
       </div>
     )
   }
@@ -134,8 +135,8 @@ export class ResumeView extends React.Component {
   render() {
     return(
       <div className='resume'>
+        <a href='src/img/pdf/Resume.pdf' className='resume-download' download target='_0'><FaDownload className='download-button'/></a>
         <img src='src/img/photos/Resume.jpg' className='resume__pic' />
-        <a className='resume-download' href='src/img/pdf/Resume.pdf' download target='_0'> Download My Resume </a>
       </div>
     )
   }
