@@ -10,6 +10,22 @@ export class ProjectView extends React.Component {
   render() {
     const projectList = [
       {
+        tileName: 'Website',
+        imageURL: 'Background.png',
+        description: 'Using Javascript, React.js, Webpack, Babel, and Scss I built this website.',
+        link: [{
+          type: 'link',
+          href: 'https://github.com/michael-youniss13/michael-youniss13.github.io',
+          content: 'View Git repository'
+        }]
+      },
+      {
+        tileName:'IBM Internship',
+        imageURL: 'IBMLogo.png',
+        description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.',
+        link: []
+      },
+      {
         tileName:'Bit Coin Paper',
         imageURL: 'BitCoinLogo.png',
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
@@ -18,6 +34,19 @@ export class ProjectView extends React.Component {
           href: './src/img/pdf/bitcoin-final-paper-math-341.pdf',
           content: 'Read Paper'
         }]
+      },
+      {
+        tileName:'Pluralsight Internship',
+        imageURL: 'PluralsightLogo.png',
+        description: 'During the summer of 2015 I built a UI component for the Pluralsight web application. The component was a menu for navigating the application. I used the React.js Javascript framework to build the component.',
+        link: []
+      },
+      {
+        tileName:'Rocket Software Internship',
+        imageURL: 'RocketSoftwareLogo.png',
+        description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.',
+        link: []
+
       },
       {
         tileName:'Tetris Project',
@@ -35,25 +64,6 @@ export class ProjectView extends React.Component {
         }]
       },
       {
-        tileName:'Rocket Software Internship',
-        imageURL: 'RocketSoftwareLogo.png',
-        description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.',
-        link: []
-
-      },
-      {
-        tileName:'Pluralsight Internship',
-        imageURL: 'PluralsightLogo.png',
-        description: 'During the summer of 2015 I built a UI component for the Pluralsight web application. The component was a menu for navigating the application. I used the React.js Javascript framework to build the component.',
-        link: []
-      },
-      {
-        tileName:'IBM Internship',
-        imageURL: 'IBMLogo.png',
-        description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.',
-        link: []
-      },
-      {
         tileName: 'Game of War',
         imageURL: 'DeckOfCards.png',
         description: 'In my free time I built a deck of playing cards in Java. I incorporated shuffling and dealing into the deck of cards. Lastly, I used the deck of cards to build a simple game of war on the terminal.',
@@ -63,16 +73,7 @@ export class ProjectView extends React.Component {
           content: 'View Git repository'
         }]
       },
-      {
-        tileName: 'Website',
-        imageURL: 'Background.png',
-        description: 'Using Javascript, React.js, Webpack, Babel, and Scss I built this website.',
-        link: [{
-          type: 'link',
-          href: 'https://github.com/michael-youniss13/michael-youniss13.github.io',
-          content: 'View Git repository'
-        }]
-      }
+
     ]
 
     return(
@@ -93,7 +94,7 @@ export class AboutView extends React.Component {
       <div className='about-me'>
         <div className='about-me__writeup'>
           <p style={{ marginTop: 0 }}>Welcome to my website. My name is Michael Youniss and I am {years} years old.
-          I am a Senior Analyst at Capital One foocussing on product development. I graduated from the University of Pennsylvania with a degree in Logic, Information and Computation.
+          I am a Senior Analyst at Capital One focussing on product development. I graduated from the University of Pennsylvania with a degree in Logic, Information and Computation.
           The courses I completed for this degree focus on Math, Computer Science and Philosophy. Outside of work I
         run marathons (3), cook meals, play music, and code puzzle. When I have  more time off, I enjoy traveling abroad.</p>
 
@@ -121,10 +122,9 @@ export class FindMeView extends React.Component {
 
     return(
       <div style={findMeViewStyle}>
-        <a className='find-me-box' href="mailto:michael.youniss13@gmail.com" ><MdEmail className='find-me-icon'/><div className='find-me-content'>michael.youniss13@gmail.com</div></a>
-        <div className='find-me-box'><FaPhoneSquare className='find-me-icon'/><div className='find-me-content'>(781) 801-5163</div></div>
-        <a href='https://github.com/michael-youniss13' target='_blank' className='find-me-box'><FaGithubSquare className='find-me-icon'/><div className='find-me-content'>Michael-Youniss13</div></a>
-        <a className='find-me-box' target='_blank' href='https://www.linkedin.com/in/michael-youniss-8639909a?trk=hp-identity-name'><FaLinkedinSquare className='find-me-icon'/><div className='find-me-content'>Michael Youniss</div></a>
+        <a className='find-me-box' href="mailto:michael.youniss13@gmail.com" ><MdEmail className='find-me-icon'/><div className='find-me-content'></div></a>
+        <a href='https://github.com/michael-youniss13' target='_blank' className='find-me-box'><FaGithubSquare className='find-me-icon'/><div className='find-me-content'></div></a>
+        <a className='find-me-box' target='_blank' href='https://www.linkedin.com/in/michael-youniss-8639909a?trk=hp-identity-name'><FaLinkedinSquare className='find-me-icon'/><div className='find-me-content'></div></a>
       </div>
     )
   }

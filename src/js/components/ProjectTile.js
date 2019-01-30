@@ -3,7 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import { Colors } from '../../Constants';
 
-import MdArrowDropDownCircle from 'react-icons/lib/md/arrow-drop-down-circle';
+import MdArrowDropDown from 'react-icons/lib/md/arrow-drop-down';
 
 
 export default class ProjectTile extends React.Component {
@@ -53,16 +53,19 @@ export default class ProjectTile extends React.Component {
       backgroundColor: Colors.WHITE,
     };
     const TileTitleStyle = {
-      backgroundColor: Colors.WHITE,
+      backgroundColor: Colors.PRIMARY_COLOR_DARK,
       height: '75px',
       textAlign: 'center',
       verticalAlign: 'middle',
       display: 'table-cell',
-      width: '200px'
+      width: '200px',
+      fontSize: '120%',
+      fontWeight: 'bold'
     };
     const ImageStyle = {
       width: 'inherit',
-      height: 'inherit'
+      height: 'inherit',
+      boxShadow: 'inset 0px 10px 10px -5px rgba(0,0,0,0.5)'
     };
 
 
@@ -97,10 +100,11 @@ export default class ProjectTile extends React.Component {
       <div style={TileStyle}
            onMouseEnter={this.onTileEnter.bind(this)}
            onMouseLeave={this.onTileLeave.bind(this)}>
-        <div style={TileBodyStyle}>
-          <img src={imageURL} style={ImageStyle} />
+        <div style={TileTitleStyle}>
+          {this.props.tileName}
         </div>
         <div className={DescriptionClasses}>
+          <p></p>
           {this.props.description}
           {this.props.link.map((link) => {
             if(link.type === 'download') {
@@ -112,15 +116,17 @@ export default class ProjectTile extends React.Component {
             }
           })}
         </div>
-        <div style={TileTitleStyle}>
-          {this.props.tileName}
-        </div>
         <div style={{ height: '0px' }}>
-          <MdArrowDropDownCircle className={ButtonClasses}
+          <MdArrowDropDown className={ButtonClasses}
                                          onClick={this.handleButtonClick.bind(this)}
                                          onMouseDown={this.onButtonEnter.bind(this)}
                                          onMouseUp={this.onButtonLeave.bind(this)}/>
         </div>
+        <div style={TileBodyStyle}>
+          <img src={imageURL} style={ImageStyle} />
+        </div>
+
+
       </div>
     )
   }

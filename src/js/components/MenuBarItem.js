@@ -20,15 +20,20 @@ export default class MenuBarItem extends React.Component {
     const activeItem = this.props.item.view === this.props.currentView;
     let menuItemStyle = {
       display: 'inline-block',
-      width: '17%',
+      marginLeft: '1%',
+      marginRight: '1%',
+      width: '15%',
       fontWeight: '100',
       cursor: 'pointer',
       textAlign: 'center',
       fontSize: '1.2em'
     };
 
-    activeItem ? menuItemStyle.color = Colors.ACCENT_COLOR : menuItemStyle.color = Colors.TEXT_COLOR;
-    this.state.mouseHovering ? menuItemStyle.borderBottom = 'solid 2px ' + Colors.ACCENT_COLOR :  menuItemStyle.borderBottom = 'solid 2px transparent';
+    activeItem ? menuItemStyle.borderBottom = 'solid 2px ' + Colors.SECONDARY_COLOR :  menuItemStyle.borderBottom = 'solid 2px transparent';;
+
+    if(this.state.mouseHovering){
+      menuItemStyle.borderBottom = 'solid 2px ' + Colors.SECONDARY_COLOR
+    }
 
     return(
       <div  style={ menuItemStyle }
