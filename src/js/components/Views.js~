@@ -92,14 +92,10 @@ export class AboutView extends React.Component {
     return(
       <div className='about-me'>
         <div className='about-me__writeup'>
-          <p style={{ marginTop: 0 }}>Welcome to my website. My name is Michael Youniss and I am {years} years old.
-          I am a Senior Analyst at Capital One foocussing on product development. I graduated from the University of Pennsylvania with a degree in Logic, Information and Computation.
-          The courses I completed for this degree focus on Math, Computer Science and Philosophy. Outside of work I
-        run marathons (3), cook meals, play music, solve puzzles, and code. When I have  more time off, I enjoy traveling abroad and exploring different cultures.</p>
+          <p style={{ marginTop: 0 }}> I am Product Manager at Capital One. I graduated from the University of Pennsylvania with a degree in Logic, Information and Computation.
+          I run marathons (4), cook meals, play music, solve puzzles, and code. When I have  more time off, I enjoy hiking and traveling abroad.</p>
 
-          <p>I coded this website using Javascript, React.js, Webpack, Babel, and Scss.</p>
-
-          <p style={{ marginBottom: 0 }}>Feel free to look around and reach out to me  with any inquiries.</p>
+          <p>I coded this website from scratch using Javascript, React.js, Webpack, Babel, and Sass.</p>
         </div>
         <div className='about-me__photo-wrapper'>
           <img className='about-me__photo' src='src/img/photos/me.JPG' />
