@@ -14,7 +14,7 @@ export default class TitleBar extends React.Component {
 			<div>
 				<div className='frosted-glass'></div>
 				<div className='title-bar'>
-					<div style={titleStyle}>MICHAEL YOUNISS</div>
+					<div style={titleStyle}>Michael Youniss</div>
 					<MenuBar menuItems={this.props.menuItems} handleClick={this.props.handleClick} currentView={this.props.currentView} />
 					</div>
 				</div>

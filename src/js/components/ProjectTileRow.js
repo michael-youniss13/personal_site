@@ -21,15 +21,6 @@ export default class ProjectTileRow extends React.Component {
   }
 }
 
-
-/*
-<ProjectTile tileName={'Bit Coin Paper'} imageURL={'BitCoinLogo.png'}/>
-<ProjectTile tileName={'Rocket Software Internship'} imageURL={'RocketSoftwareLogo.png'}/>
-<ProjectTile tileName={'Pluralsight Internship'} imageURL={'PluralsightLogo.png'}/>
-<ProjectTile tileName={'IBM Internship'} imageURL={'IBMLogo.png'}/>
-<ProjectTile tileName={'Tetris Project'} imageURL={'TetrisLogo.png'}/>
-*/
-
 ProjectTileRow.PropTypes = {
   projectList: React.PropTypes.array
 }

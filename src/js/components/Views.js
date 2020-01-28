@@ -11,9 +11,10 @@ export class ProjectView extends React.Component {
   render() {
     const projectList = [
       {
+        key: 1,
         tileName: 'Website',
         imageURL: 'Background.png',
-        description: 'Using Javascript, React.js, Webpack, Babel, and Scss I built this website.',
+        description: 'Using Javascript and Sass I built this website.',
         link: [{
           type: 'link',
           href: 'https://github.com/michael-youniss13/michael-youniss13.github.io',
@@ -21,12 +22,14 @@ export class ProjectView extends React.Component {
         }]
       },
       {
+        key: 2,
         tileName:'IBM Internship',
         imageURL: 'IBMLogo.png',
         description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.',
         link: []
       },
       {
+        key: 3,
         tileName:'Bitcoin Paper',
         imageURL: 'BitCoinLogo.png',
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
@@ -37,12 +40,14 @@ export class ProjectView extends React.Component {
         }]
       },
       {
+        key: 4,
         tileName:'Pluralsight Internship',
         imageURL: 'PluralsightLogo.png',
         description: 'During the summer of 2015 I built a UI component for the Pluralsight web application. The component was a menu for navigating the application. I used the React.js Javascript framework to build the component.',
         link: []
       },
       {
+        key: 5,
         tileName:'Rocket Software Internship',
         imageURL: 'RocketSoftwareLogo.png',
         description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.',
@@ -50,6 +55,7 @@ export class ProjectView extends React.Component {
 
       },
       {
+        key: 6,
         tileName:'Tetris Project',
         imageURL: 'TetrisLogo.png',
         description: 'As a final project for CIS 120: Programming Langugaes and Techniques, I coded Tetris in Java.',
@@ -65,6 +71,7 @@ export class ProjectView extends React.Component {
         }]
       },
       {
+        key: 7,
         tileName: 'Game of War',
         imageURL: 'DeckOfCards.png',
         description: 'In my free time I built a deck of playing cards in Java. I incorporated shuffling and dealing into the deck of cards. Lastly, I used the deck of cards to build a simple game of war on the terminal.',
@@ -88,20 +95,15 @@ export class ProjectView extends React.Component {
 
 export class AboutView extends React.Component {
   render() {
-    var ageDiffInMs = Date.now() - (new Date('2/13/1995').getTime());
-    var diff = new Date(ageDiffInMs);
-    var years = (diff.getUTCFullYear() - 1970);
     return(
       <div className='about-me'>
         <div className='about-me__writeup'>
-          <p style={{ marginTop: 0 }}>Welcome to my website. My name is Michael Youniss and I am {years} years old.
-          I am a Senior Analyst at Capital One focussing on product development. I graduated from the University of Pennsylvania with a degree in Logic, Information and Computation.
-          The courses I completed for this degree focus on Math, Computer Science and Philosophy. Outside of work I
-        run marathons (3), cook meals, play music, and code puzzle. When I have  more time off, I enjoy traveling abroad.</p>
+          <p style={{ marginTop: 0 }}> Hey, welcome to my website. I am a Product Manager at Capital One. I graduated from the University of Pennsylvania with a degree in Logic, Information and Computation.
+          I run marathons (4), cook meals, and read. When I have  more time off, I hike and travel abroad.</p>
 
-          <p>I coded this website using Javascript, React.js, Webpack, Babel, and Scss.</p>
+          <p>I built this website to share the work I've done in my free time.</p>
+          <p>I built this website from scratch using Javascript and Sass.</p>
 
-          <p style={{ marginBottom: 0 }}>Feel free to look around and reach out to me  with any inquiries.</p>
         </div>
         <div className='about-me__photo-wrapper'>
           <img className='about-me__photo' src='src/img/photos/me.JPG' />

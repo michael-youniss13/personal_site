@@ -1,4 +1,3 @@
-
 export const Colors = {
 	PRIMARY_COLOR: 'rgb(179,229,252)',
 	PRIMARY_COLOR_LIGHT: 'rgb(230,255,255)',
@@ -13,10 +12,6 @@ export const Colors = {
 	WHITE: 'rgb(255,255,255)',
 	PRESSED_WHITE: 'rgba(255, 255, 255, 0.9)',
 	WHITE_LIGHT: 'rgba(255,255,255,.75)',
-
-
-
-
 }
 
 export const Views = {

@@ -89,13 +89,6 @@ export default class ProjectTile extends React.Component {
       ButtonClasses = ButtonClasses.concat(' button--unpressed ');
     }
 
-/*        <MdArrowDropDownCircle className={ButtonClasses}
-                               onClick={this.handleButtonClick.bind(this)}
-                               onMouseDown={this.onButtonEnter.bind(this)}
-                               onMouseUp={this.onButtonLeave.bind(this)}/>
-
-
-*/
     return(
       <div style={TileStyle}
            onMouseEnter={this.onTileEnter.bind(this)}

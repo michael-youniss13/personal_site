@@ -15,6 +15,23 @@ $WHITE: rgb(255,255,255);
 $PRESSED_WHITE: rgba(255, 255, 255, 0.9);
 $WHITE_LIGHT: rgba(255,255,255,.75);
 
+
+$PRIMARY_1: #F2FAFF;
+$PRIMARY_2: #CFEBFE;
+$PRIMARY_3: #ADDCFC;
+$PRIMARY_4: #6DBFF7;
+$PRIMARY_5: #39A3EF;
+$PRIMARY_6: #1389E4;
+$PRIMARY_7: #0073D3;
+$PRIMARY_8: #0063BD;
+$PRIMARY_9: #0050A3;
+$PRIMARY_10: #003F87;
+
+
+
+
+
+
 .body {
   margin: 0;
 }
@@ -97,8 +114,6 @@ $WHITE_LIGHT: rgba(255,255,255,.75);
   transform-origin: 50% 50%;
 }
 
-.button--condensed {
-}
 
 .find-me-box {
   text-decoration: none;

@@ -5,7 +5,10 @@ const PUBLIC = path.resolve(__dirname, 'src/js/public');
 
 module.exports = {
   entry: './src/js/index.js',
-  output: {path: PUBLIC, filename: 'bundle.js'},
+  output: {path: PUBLIC, filename: 'bundle.js', publicPath: '/'},
+  devServer: {
+    publicPath: '/src/js/public'
+  },
   module: {
     loaders: [
       {
