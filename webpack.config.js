@@ -1,13 +1,15 @@
 var path = require('path');
 var webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 const PUBLIC = path.resolve(__dirname, 'src/js/public');
 
 module.exports = {
   entry: './src/js/index.js',
-  output: {path: PUBLIC, filename: 'bundle.js', publicPath: '/'},
+  output: {path: path.resolve('./build'), filename: 'bundle.js', publicPath: path.resolve('./build/')},
   devServer: {
-    publicPath: '/src/js/public'
+    publicPath: path.resolve('./build/')
   },
   module: {
     loaders: [
@@ -30,4 +32,12 @@ module.exports = {
      }
     ],
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.resolve('./index.html')
+    })
+
+  ]
 };

@@ -35,7 +35,7 @@ export class ProjectView extends React.Component {
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
         link: [{
           type: 'download',
-          href: './src/img/pdf/bitcoin-final-paper-math-341.pdf',
+          href: '/src/img/pdf/bitcoin-final-paper-math-341.pdf',
           content: 'Read Paper'
         }]
       },
@@ -66,7 +66,7 @@ export class ProjectView extends React.Component {
         },
         {
           type: 'download',
-          href: 'src/img/jar/Tetris.jar',
+          href: '/src/img/jar/Tetris.jar',
           content: 'Download game'
         }]
       },
@@ -106,7 +106,7 @@ export class AboutView extends React.Component {
 
         </div>
         <div className='about-me__photo-wrapper'>
-          <img className='about-me__photo' src='src/img/photos/me.JPG' />
+          <img className='about-me__photo' src='/src/img/photos/me.JPG' />
         </div>
       </div>
     )
@@ -137,8 +137,8 @@ export class ResumeView extends React.Component {
   render() {
     return(
       <div className='resume'>
-        <a href='src/img/pdf/Resume.pdf' className='resume-download' download target='_0'><FaDownload className='download-button'/></a>
-        <img src='src/img/photos/Resume.jpg' className='resume__pic' />
+        <a href='/src/img/pdf/Resume.pdf' className='resume-download' download target='_0'><FaDownload className='download-button'/></a>
+        <img src='/src/img/photos/Resume.jpg' className='resume__pic' />
       </div>
     )
   }
