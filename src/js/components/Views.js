@@ -106,7 +106,7 @@ export class AboutView extends React.Component {
 
         </div>
         <div className='about-me__photo-wrapper'>
-          <img className='about-me__photo' src='/src/img/photos/me.JPG' />
+          <img className='about-me__photo' src='./build/img/photos/me.JPG' />
         </div>
       </div>
     )

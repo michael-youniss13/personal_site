@@ -28,7 +28,7 @@ module.exports = {
       },
       {
        test: /\.(png|jpg)$/,
-       include: path.resolve(__dirname, 'src/img'),
+       include: path.resolve(__dirname, './build/img'),
        loader: 'url-loader?limit=10000000'
      }
     ],
