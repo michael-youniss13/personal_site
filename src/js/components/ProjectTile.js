@@ -44,7 +44,7 @@ export default class ProjectTile extends React.Component {
       boxShadow: '0 0 15px 2px rgba(0,0,0, 0.45)'
     };
     this.state.tileHover ?   TileStyle.boxShadow = '0 0 15px 2px rgba(0,0,0, 0.45)' : TileStyle.boxShadow = '0 0 20px 2px rgba(0,0,0, 0.4)';
-    let imageURL = '/src/img/photos/';
+    let imageURL = 'src/img/photos/';
     imageURL = imageURL.concat(this.props.imageURL);
 
     const TileBodyStyle = {

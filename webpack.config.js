@@ -7,9 +7,10 @@ const PUBLIC = path.resolve(__dirname, 'src/js/public');
 
 module.exports = {
   entry: './src/js/index.js',
-  output: {path: path.resolve('./build'), filename: 'bundle.js', publicPath: path.resolve('./build/')},
+  output: {path: path.resolve(__dirname, './build'), filename: 'bundle.js', publicPath: '/'},
   devServer: {
-    publicPath: path.resolve('./build/')
+    publicPath: '/',
+    contentBase: path.resolve(__dirname, './build')
   },
   module: {
     loaders: [
@@ -36,7 +37,7 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve('./index.html')
+      template: path.resolve(__dirname, './index.html')
     })
 
   ]
