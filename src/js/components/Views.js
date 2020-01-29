@@ -5,7 +5,10 @@ import ProjectTileRow from './ProjectTileRow';
 import  { Colors } from '../../Constants'
 import { FaGithubSquare, FaPhoneSquare, FaSpotify, FaLinkedinSquare } from 'react-icons/lib/fa';
 import { MdEmail } from 'react-icons/lib/md';
-import { FaDownload } from 'react-icons/lib/fa'
+import { FaDownload } from 'react-icons/lib/fa';
+
+import my_pic from '../../img/photos/me.jpg'
+
 
 export class ProjectView extends React.Component {
   render() {
@@ -106,7 +109,7 @@ export class AboutView extends React.Component {
 
         </div>
         <div className='about-me__photo-wrapper'>
-          <img className='about-me__photo' src='./build/img/photos/me.JPG' />
+          <img className='about-me__photo' src={my_pic} />
         </div>
       </div>
     )
