@@ -8,7 +8,8 @@ import { MdEmail } from 'react-icons/lib/md';
 import { FaDownload } from 'react-icons/lib/fa';
 
 import my_pic from '../../img/photos/me.jpg'
-
+import resume_photo from '../../img/photos/Resume.jpg';
+import resume_pdf from '../../img/pdf/Resume.pdf';
 
 export class ProjectView extends React.Component {
   render() {
@@ -140,8 +141,8 @@ export class ResumeView extends React.Component {
   render() {
     return(
       <div className='resume'>
-        <a href='/src/img/pdf/Resume.pdf' className='resume-download' download target='_0'><FaDownload className='download-button'/></a>
-        <img src='/src/img/photos/Resume.jpg' className='resume__pic' />
+        <a href={resume_pdf} className='resume-download' download target='_0'><FaDownload className='download-button'/></a>
+        <img src={resume_photo} className='resume__pic' />
       </div>
     )
   }

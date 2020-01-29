@@ -29,10 +29,11 @@ module.exports = {
         loaders: ["style-loader", "css-loader","sass-loader"]
       },
       {
-       test: /\.(png|jpg)$/,
-       include: path.resolve(__dirname, './build/img'),
-       loader: 'url-loader?limit=10000000'
-     }
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+            'file-loader'
+        ]
+      }
     ],
   },
   plugins: [
