@@ -9,8 +9,7 @@ import { FaDownload } from 'react-icons/lib/fa';
 
 import my_pic from '../../img/photos/me.jpg'
 import resume_photo from '../../img/photos/Resume.jpg';
-import resume_pdf from '../../img/pdf/Resume.pdf';
-
+import resume_pdf from '../../img/pdf/Michael-Youniss-Resume.pdf';
 
 import background from '../../img/photos/Background.png';
 import ibm_pic from '../../img/photos/IBMLogo.png';
@@ -19,6 +18,9 @@ import pluralsight_logo from '../../img/photos/PluralsightLogo.png';
 import rocket_logo from '../../img/photos/RocketSoftwareLogo.png';
 import tetris_logo from '../../img/photos/TetrisLogo.png';
 import deck_of_cards from '../../img/photos/DeckOfCards.png';
+
+import bitcoin_paper from '../../img/pdf/bitcoin-paper.pdf';
+import tetris_jar from '../../img/jar/Tetris.jar';
 
 
 export class ProjectView extends React.Component {
@@ -49,7 +51,7 @@ export class ProjectView extends React.Component {
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
         link: [{
           type: 'download',
-          href: '/src/img/pdf/bitcoin-final-paper-math-341.pdf',
+          href: bitcoin_paper,
           content: 'Read Paper'
         }]
       },
@@ -80,7 +82,7 @@ export class ProjectView extends React.Component {
         },
         {
           type: 'download',
-          href: '/src/img/jar/Tetris.jar',
+          href: tetris_jar,
           content: 'Download game'
         }]
       },
@@ -151,7 +153,7 @@ export class ResumeView extends React.Component {
   render() {
     return(
       <div className='resume'>
-        <a href={resume_pdf} className='resume-download' download target='_0'><FaDownload className='download-button'/></a>
+        <a href={resume_pdf} className='resume-download' target='_0'><FaDownload className='download-button'/></a>
         <img src={resume_photo} className='resume__pic' />
       </div>
     )

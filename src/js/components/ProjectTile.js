@@ -99,7 +99,7 @@ export default class ProjectTile extends React.Component {
             if(link.type === 'download') {
               return <p key={link.content}><a href={link.href} target='_0'>{link.content}</a></p>;
             } else if (link.type === 'link') {
-              return <p key={link.content}><a href={link.href} target='_0'>{link.content}</a></p>;
+              return <p key={link.content}><a name={this.props.tileName} href={link.href} target='_0'>{link.content}</a></p>;
             } else  {
               return <div key={link.content}></div>
             }
