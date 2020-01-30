@@ -30,7 +30,7 @@ export class ProjectView extends React.Component {
         key: '1',
         tileName: 'Website',
         image: background,
-        description: 'Using Javascript and Sass I built this website.',
+        description: 'I coded this website from scratch using Javascript and Sass. I used Webpack to build the website. The website is deployed and hosted on Netlfiy',
         link: [{
           type: 'link',
           href: 'https://github.com/michael-youniss13/michael-youniss13.github.io',
@@ -114,11 +114,16 @@ export class AboutView extends React.Component {
     return(
       <div className='about-me'>
         <div className='about-me__writeup'>
-          <p style={{ marginTop: 0 }}> Hey, welcome to my website. I am a Product Manager at Capital One. I graduated from the University of Pennsylvania with a degree in Logic, Information and Computation.
-          I run marathons (4), cook meals, and read. When I have  more time off, I hike and travel abroad.</p>
+          <p style={{ marginTop: 0 }}>  Hey, welcome to my website!</p>
+          <p>I am product manager for the credit card application at Capital One. </p>
+          <p>Before working at Capital One, I graduated from UPenn in 2017 with a BA in Logic, Information, and Computation, studying 
+            math, physics, philosophy, and computer science. I spent my summers as an undergraduate interning as a Junior Software Engineer for three tech companies.</p>  
+          <p>Outside of work I spend my time training for marathons, making homemade pasta, and backpacking in national parks. Most recently, I traveled to Glacier National Park 
+            and came face to face with four moose and a grizzly bear and her cub.</p>
 
-          <p>I built this website to share the work I've done in my free time.</p>
-          <p>I built this website from scratch using Javascript and Sass.</p>
+          <p>I built this website (from scratch) to share the work I've done in my free time.</p>
+
+          <p>Click around and check out my work.</p>
 
         </div>
         <div className='about-me__photo-wrapper'>
