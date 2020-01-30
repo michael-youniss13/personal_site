@@ -11,13 +11,23 @@ import my_pic from '../../img/photos/me.jpg'
 import resume_photo from '../../img/photos/Resume.jpg';
 import resume_pdf from '../../img/pdf/Resume.pdf';
 
+
+import background from '../../img/photos/Background.png';
+import ibm_pic from '../../img/photos/IBMLogo.png';
+import bitcoin_pic from '../../img/photos/BitCoinLogo.png';
+import pluralsight_logo from '../../img/photos/PluralsightLogo.png';
+import rocket_logo from '../../img/photos/RocketSoftwareLogo.png';
+import tetris_logo from '../../img/photos/TetrisLogo.png';
+import deck_of_cards from '../../img/photos/DeckOfCards.png';
+
+
 export class ProjectView extends React.Component {
   render() {
     const projectList = [
       {
-        key: 1,
+        key: '1',
         tileName: 'Website',
-        imageURL: 'Background.png',
+        image: background,
         description: 'Using Javascript and Sass I built this website.',
         link: [{
           type: 'link',
@@ -26,16 +36,16 @@ export class ProjectView extends React.Component {
         }]
       },
       {
-        key: 2,
+        key: '2',
         tileName:'IBM Internship',
-        imageURL: 'IBMLogo.png',
+        image: ibm_pic,
         description: 'For the duration of the summer of 2016, I built a UI component in Javascript using the React.js framework. The UI component gathered user feedback and sent it to a database.',
         link: []
       },
       {
-        key: 3,
+        key: '3',
         tileName:'Bitcoin Paper',
-        imageURL: 'BitCoinLogo.png',
+        image: bitcoin_pic,
         description: 'For Math 341: A Mathematical Introduction to Cryptography, I wrote a paper on the mathematics underlying Bitcoin technology.',
         link: [{
           type: 'download',
@@ -44,24 +54,24 @@ export class ProjectView extends React.Component {
         }]
       },
       {
-        key: 4,
+        key: '4',
         tileName:'Pluralsight Internship',
-        imageURL: 'PluralsightLogo.png',
+        image: pluralsight_logo,
         description: 'During the summer of 2015 I built a UI component for the Pluralsight web application. The component was a menu for navigating the application. I used the React.js Javascript framework to build the component.',
         link: []
       },
       {
-        key: 5,
+        key: '5',
         tileName:'Rocket Software Internship',
-        imageURL: 'RocketSoftwareLogo.png',
+        image: rocket_logo,
         description: 'During the summers of 2013 and 2014, my internship responsibilities at Rocket Software included programming iOS applications, researching big data, and programming network applications in Java.',
         link: []
 
       },
       {
-        key: 6,
+        key: '6',
         tileName:'Tetris Project',
-        imageURL: 'TetrisLogo.png',
+        image: tetris_logo,
         description: 'As a final project for CIS 120: Programming Langugaes and Techniques, I coded Tetris in Java.',
         link: [{
           type: 'link',
@@ -75,9 +85,9 @@ export class ProjectView extends React.Component {
         }]
       },
       {
-        key: 7,
+        key: '7',
         tileName: 'Game of War',
-        imageURL: 'DeckOfCards.png',
+        image: deck_of_cards,
         description: 'In my free time I built a deck of playing cards in Java. I incorporated shuffling and dealing into the deck of cards. Lastly, I used the deck of cards to build a simple game of war on the terminal.',
         link: [{
           type: 'link',

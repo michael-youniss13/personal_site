@@ -5,7 +5,6 @@ import { Colors } from '../../Constants';
 
 import MdArrowDropDown from 'react-icons/lib/md/arrow-drop-down';
 
-
 export default class ProjectTile extends React.Component {
   constructor() {
     super();
@@ -44,8 +43,6 @@ export default class ProjectTile extends React.Component {
       boxShadow: '0 0 15px 2px rgba(0,0,0, 0.45)'
     };
     this.state.tileHover ?   TileStyle.boxShadow = '0 0 15px 2px rgba(0,0,0, 0.45)' : TileStyle.boxShadow = '0 0 20px 2px rgba(0,0,0, 0.4)';
-    let imageURL = 'src/img/photos/';
-    imageURL = imageURL.concat(this.props.imageURL);
 
     const TileBodyStyle = {
       width: '200px',
@@ -67,7 +64,6 @@ export default class ProjectTile extends React.Component {
       height: 'inherit',
       boxShadow: 'inset 0px 10px 10px -5px rgba(0,0,0,0.5)'
     };
-
 
 
     let DescriptionClasses = 'tile ';
@@ -92,7 +88,7 @@ export default class ProjectTile extends React.Component {
     return(
       <div style={TileStyle}
            onMouseEnter={this.onTileEnter.bind(this)}
-           onMouseLeave={this.onTileLeave.bind(this)}>
+           onMouseLeave={this.onTileLeave.bind(this)} >
         <div style={TileTitleStyle}>
           {this.props.tileName}
         </div>
@@ -101,11 +97,11 @@ export default class ProjectTile extends React.Component {
           {this.props.description}
           {this.props.link.map((link) => {
             if(link.type === 'download') {
-              return <p><a href={link.href} target='_0'>{link.content}</a></p>;
+              return <p key={link.content}><a href={link.href} target='_0'>{link.content}</a></p>;
             } else if (link.type === 'link') {
-              return <p><a href={link.href} target='_0'>{link.content}</a></p>;
+              return <p key={link.content}><a href={link.href} target='_0'>{link.content}</a></p>;
             } else  {
-              return <div></div>
+              return <div key={link.content}></div>
             }
           })}
         </div>
@@ -116,10 +112,8 @@ export default class ProjectTile extends React.Component {
                                          onMouseUp={this.onButtonLeave.bind(this)}/>
         </div>
         <div style={TileBodyStyle}>
-          <img src={imageURL} style={ImageStyle} />
+          <img src={this.props.image} style={ImageStyle} />
         </div>
-
-
       </div>
     )
   }
@@ -127,7 +121,8 @@ export default class ProjectTile extends React.Component {
 
 ProjectTile.PropTypes = {
   tileName: React.PropTypes.string,
-  imageURL: React.PropTypes.string,
+  image: React.PropTypes.string,
   link: React.PropTypes.string,
-  link_path: React.PropTypes.string
+  link_path: React.PropTypes.string,
+  key: React.PropTypes.string
 }
