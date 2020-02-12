@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 
 
@@ -30,7 +31,7 @@ module.exports = {
         loaders: ["style-loader", "css-loader","sass-loader"]
       },
       {
-        test: /\.(png|svg|jpg|gif|pdf|jar)$/,
+        test: /\.(png|svg|jpg|gif|pdf|jar|ico)$/,
         loader: 'file-loader',
         options: {
             name: '[name].[ext]'
@@ -43,7 +44,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(__dirname, './index.html')
-    })
-
+    }),
+    new CopyWebpackPlugin([
+      { from: './src/img/photos/favicon.ico'},
+    ])
   ]
 };

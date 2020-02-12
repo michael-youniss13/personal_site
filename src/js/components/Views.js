@@ -8,7 +8,7 @@ import { MdEmail } from 'react-icons/lib/md';
 import { FaDownload } from 'react-icons/lib/fa';
 
 import my_pic from '../../img/photos/me.jpg'
-import resume_photo from '../../img/photos/Resume.jpg';
+import resume_photo from '../../img/photos/Resume.png';
 import resume_pdf from '../../img/pdf/Michael-Youniss-Resume.pdf';
 
 import background from '../../img/photos/Background.png';
@@ -158,7 +158,8 @@ export class ResumeView extends React.Component {
   render() {
     return(
       <div className='resume'>
-        <a href={resume_pdf} className='resume-download' target='_0'><FaDownload className='download-button'/></a>
+        
+        <a href={resume_pdf} className='resume-download' target='_0'><div className='resume-download__text'>Download Here</div><FaDownload className='download-button'/></a>
         <img src={resume_photo} className='resume__pic' />
       </div>
     )
