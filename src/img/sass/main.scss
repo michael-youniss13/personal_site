@@ -180,15 +180,42 @@ $PRIMARY_10: #003F87;
 }
 
 .resume-download {
-  margin-left:75%;
+  max-width: fit-content;
+  margin-left: 75%;
+  display: block;
+  border: black;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  position: absolute;
+}
+
+.resume-download {
+  max-width: fit-content;
+  margin-left: 75%;
+  display: block;
+  border: black;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  position: absolute;
+}
+
+.resume__spacer{
+  width: 10px;
   display: inline-block;
 }
 
 .resume-download__text{
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   display: inline-block;
-
+  color: black;
+  vertical-align: middle;
+  margin: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: $SECONDARY_COLOR_DARK;
+  border-bottom-width: 2px;
 }
 
 .resume__pic {
@@ -198,7 +225,9 @@ $PRIMARY_10: #003F87;
 }
 
 .download-button {
-  color: $SECONDARY_COLOR_DARK;
-  font-size: 50px;
-  display: block;
+  color: black;
+  font-size: 20px;
+  display: inline-block;
+  height: inherit;
+  vertical-align: middle;
 }

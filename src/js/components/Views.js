@@ -159,7 +159,9 @@ export class ResumeView extends React.Component {
     return(
       <div className='resume'>
         
-        <a href={resume_pdf} className='resume-download' target='_0'><div className='resume-download__text'>Download Here</div><FaDownload className='download-button'/></a>
+        <a href={resume_pdf} className='resume-download' target='_0'>
+          <div className='resume-download__text'>Download</div>
+        </a>
         <img src={resume_photo} className='resume__pic' />
       </div>
     )
