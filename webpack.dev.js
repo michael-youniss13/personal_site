@@ -31,7 +31,7 @@ module.exports = {
         loaders: ["style-loader", "css-loader","sass-loader"]
       },
       {
-        test: /\.(png|svg|jpg|gif|pdf|jar|ico)$/,
+        test: /\.(png|svg|jpg|gif|pdf|jar)$/,
         loader: 'file-loader',
         options: {
             name: '[name].[ext]'
@@ -43,10 +43,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve(__dirname, './index.html')
-    }),
-    new CopyWebpackPlugin([
-      { from: './src/img/photos/favicon.ico'},
-    ])
+      template: path.resolve(__dirname, './index.html'),
+      favicon: path.resolve(__dirname, './src/img/photos/icon.png')
+    })
   ]
 };
