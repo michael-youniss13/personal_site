@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --watch --open --hot --config webpack.dev.js",
     "build": "webpack -p --config webpack.prod.js",
+    "build-dev": "webpack -p --config webpack.dev.js",
     "watch": "webpack --watch --config webpack.dev.js"
   },
   "repository": {
