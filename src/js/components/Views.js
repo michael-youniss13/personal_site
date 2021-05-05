@@ -115,7 +115,7 @@ export class AboutView extends React.Component {
       <div className='about-me'>
         <div className='about-me__writeup'>
           <p style={{ marginTop: 0 }}>  Hey, welcome to my website!</p>
-          <p>I am product manager for the PIM and Data Model at Salsify. Before that, I was a Product Manager for the Credit Card Application Processing Team at Capital One.</p>
+          <p>I am a Product Manager for the PIM and Data Model at Salsify. Before that, I was a Product Manager for the Credit Card Application Processing Team at Capital One.</p>
           <p>Before working at Capital One, I graduated from UPenn in 2017 with a B.A. in Logic, Information, and Computation, studying 
             math, physics, philosophy, and computer science. I spent my summers as an undergraduate interning as a Junior Software Engineer for three tech companies.</p>  
           <p>Outside of work I spend my time training for marathons, making homemade pasta, and backpacking in national parks. Most recently, I traveled to Glacier National Park 
